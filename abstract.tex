@@ -1,0 +1,46 @@
+\section*{Abstract}
+
+\subsection*{Background}
+Agencies such as the Centers for Disease Control (CDC) currently release incidence
+data (e.g., Influenza), along with descriptive summaries of simple
+spatio-temporal patterns and trends. However, public health researchers, government agencies,
+as well as the general public, are often interested in deeper patterns and insights
+into how the disease is spreading.
+Analysis by domain experts is needed for deriving such insights from
+incidence data.
+
+\subsection*{Objective}
+Our goal is to develop an automated approach for finding 
+interesting spatio-temporal patterns in the spread of a disease
+over a large region, such as:
+regions which have specific characteristics, e.g., high incidence
+in a particular week, those which showed a sudden change in incidence,
+or regions which have significantly different incidence compared to
+earlier seasons.
+
+\subsection*{Methods}
+We develop techniques from the area of transactional data mining for characterizing
+and finding interesting spatio-temporal patterns in disease spread in an
+automated manner.  A key part of our approach involves using the principle of
+minimum description length for characterizing a set of regions in terms of
+combinations of attributes; we use integer programming to find such descriptions.
+Our automated approach explores regions that have different kinds of temporal
+patterns, and ranks them based on their description length.
+
+\subsection*{Results}
+We apply our methods for finding spatio-temporal patterns in the spread of
+seasonal Influenza in the US at the resolution of states. We find succinct
+descriptions for regions (sets of states) with specific characteristics,
+e.g., high activity level, which give better insight into such regions.
+Our approach also finds interesting patterns in the form of
+regions exhibiting significant changes in activity levels in a short time,
+and in terms of activity levels in the past seasons.
+
+\subsection*{Conclusions}
+Our approach can provide new insights into the patterns and trends
+in disease spread in an automated manner.
+Our results show that the description complexity is an effective approach for
+characterizing sets of interest, which can be easily extended to other
+diseases and regions, beyond Influenza in the US.
+The patterns we find have a specific
+structure, which can be easily adapted for automated generation of narratives.

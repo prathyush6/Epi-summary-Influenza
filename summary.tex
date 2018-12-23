@@ -1,0 +1,78 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage} %[cm]
+\usepackage{lmodern} % enhanced version of computer modern
+\usepackage[T1]{fontenc} % for hyphenated characters
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{microtype}
+\usepackage{enumerate}
+\usepackage{subfig}
+\usepackage{ctable} % provides toprule, bottomrule, midrule
+%\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{array, multirow}
+%\usepackage{hyperref}
+\usepackage{breqn}
+\DeclareCaptionType{copyrightbox}
+\usepackage{color}
+\newcommand{\expect}{\mathrm{Exp}}
+\newcommand{\hide}[1]{}
+\newtheorem{theorem}{Theorem} % {\bfseries}{\itshape}
+\newtheorem{lemma}{Lemma}[section]{\bfseries}{\itshape}
+\usepackage{url}
+
+
+
+%\newdef{claim}{Claim}
+%
+%\theoremstyle{definition}
+%\newtheorem{definition}[lemma]{Definition} % {\bfseries}{\itshape}
+%
+%\theoremstyle{remark}
+\newtheorem{claim}[lemma]{Claim} % {\bfseries}{\itshape}
+\newtheorem{observation}[lemma]{Observation} % {\bfseries}{\itshape}
+%
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\opt}{\mathrm{OPT}}
+\newcommand{\eopt}{E_{\mathrm{OPT}}}
+\newcommand{\edeg}{e_{\mathrm{deg}}}
+\newcommand{\prob}{\textsc{Spectral Radius Minimization}}
+\newcommand{\degr}{\mathrm{d}}
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\wmax}{w_{\max}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\diff}{\textsc{diff}}
+\newcommand{\intS}{\textsc{Int}}
+\newcommand{\cost}{\textsc{cost}}
+\newcommand{\numf}{\textsc{num}}
+\newcommand{\mindesc}{\textsc{MinDesc}}
+\newcommand{\minapproxdesc}{\textsc{MinApproxDesc}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\DeclareMathOperator*{\nodes}{nodes}
+\DeclareMathOperator*{\walks}{walks}
+\DeclareMathOperator*{\ct}{count}
+
+\title{An automated approach for finding spatio-temporal patterns
+in disease spread}
+
+\begin{document}
+\maketitle
+
+\input{abstract}
+\input{intro}
+\input{methods}
+\input{results}
+\input{discuss}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\newpage
+
+
+\input{appendix}
+
+\end{document}
+

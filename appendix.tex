@@ -1,0 +1,108 @@
+\appendix
+\section*{Appendix}
+The \mindesc{} problem requires exploring over the space of
+all possible representations for a set $T$, and choosing one that has the minimum
+cost. The \minapproxdesc{} problem has the additional requirement of ensuring that
+a large part of $T$ is represented. These are both computationally very hard.
+Formally, these problems are NP-complete, even when $k_{\ell}= 1$ (i.e., each clause
+only has one feature.  We refer to \cite{GareyJohnson} for an introduction to this topic.
+Here, we solve these problems using integer programming,
+which is a powerful and general technique for solving combinatorial optimization problems.
+We describe our formulation as an integer program (IP), and how it is solved.
+
+\subsection*{A. Integer Program (IP) for \mindesc{} Problem}
+
+We start by specifying the variables and the objective function.
+Recall the notion of a tuple of features 
+$\mathbf{j}^{\ell}=(j^{\ell}_1,\ldots,j^{\ell}_{k_{\ell}})$, and a clause
+$S(\mathbf{j}^{\ell}) = S(j^{\ell}_1,\ldots,j^{\ell}_{k_{\ell}})$.
+For $\mathbf{j}\in\mathcal{C}^k$,
+let $y(\mathbf{j})$ be an indicator variable for $S(\mathbf{j})$ 
+being used as a positive clause, i.e., $y(\mathbf{j})=1$ in this case, and $0$ otherwise.
+Similarly $z(\mathbf{j})$ is the indicator variable
+for $S(\mathbf{j})$ being used as a negative clause. 
+
+
+We have the following integer program (IP):
+\begin{eqnarray}
+\nonumber
+\min \alpha \sum_{\mathbf{j}\in\mathcal{C}^k} y(\mathbf{j}) + 
+\beta \sum_{\mathbf{j}\in\mathcal{C}^k} z(\mathbf{j}) && \\
+\label{eqn1}
+\forall i\in T,\ \sum_{\mathbf{j}\in\mathcal{C}^k_i} y(\mathbf{j}) &\geq& 1\\
+\label{eqn2}
+\forall i\in T,\ \sum_{\mathbf{j}\in\mathcal{C}^k_i} z(\mathbf{j}) &=& 0\\
+\label{eqn3}
+\forall i\not\in T, \mathbf{j}\in \mathcal{C}^k_i\ \sum_{\mathbf{j'}\in\mathcal{C}^k_i} z(\mathbf{j'}) &\geq& y(\mathbf{j})\\
+\nonumber
+\forall \mathbf{j}\in \mathcal{C}^k,\ y(\mathbf{j}), z(\mathbf{j}) &\in& \{0, 1\}
+\end{eqnarray}
+
+We observe that this is a valid set of inequalities. The constraints (\ref{eqn1})
+indicate that each element $i\in T$ must be part of a positive clause.
+Since $\mathcal{C}^k_i$ is the set of all clauses of size at most $k$, containing
+element $i$, this constraint implies that at least one of these clauses must be
+picked as a positive clause, which means $y(\mathbf{j})$ must be 1 for some
+$\mathbf{j}\in \mathcal{C}^k_i$.
+No element $i\in T$ must be part of a negative
+clause, else it will not be part of the representation. This is captured in
+the constraints (\ref{eqn2}), which ensures that $z(\mathbf{j})=0$ for
+each $\mathbf{j}\in \mathcal{C}^k_i$.
+Finally, if there exists a clause $\mathbf{j}$ containing an element $i\not\in T$,
+with $y(\mathbf{j})=1$, the solution must contain a negative clause $\mathbf{j'}$
+to ``remove'' it. Therefore, we need $z(\mathbf{j'})=1$ for some
+$\mathbf{j'}\in\mathcal{C}^k_i$. This is captured through constraints (\ref{eqn3}),
+which ensures that $z(\mathbf{j'})=1$ if $y(\mathbf{j})=1$ for
+any $\mathbf{j}\in \mathcal{C}^k_i$, for some $i\not\in T$.
+
+In our work, we focus on $k=2$, since the descriptions become very complex and
+hard to interpret otherwise. The data matrix $D$ is constructed using the ILI data
+for multiple seasons. The space of tuples $\mathcal{C}^k$ is constructed from $D$,
+and the resulting IP is solved using the Gurobi optimization software \cite{gurobi}.
+For the scale of problems considered here, this solver runs within seconds, and
+returns the variables $y(\mathbf{j}), z(\mathbf{j})$ which are set to 1.
+These are then used to construct the representations discussed in the Results.
+
+\subsection*{Appendix B: IP for \minapproxdesc{} Problem}
+
+Recall that the \minapproxdesc{} gives a succinct representation for a set $T'$,
+which is ``close'' to $T$. We formalize this by requiring that 
+$|T\oplus T'|=|T-T'| + |T'-T|\leq \gamma|T|$.
+We solve this by a slight modification of the above IP.
+Specifically, we have a variable $x(i)$ for each element $i\in U$
+with the following semantics: 
+(1) if $i\in T$ is not represented, i.e., $i\in T-T'$, then $x(i)=1$, and
+(2) if $i\not\in T$ is represented, i.e., $i\in T'-T$, then $x(i)=1$.
+If neither of these conditions are satisfied, we have $x(i)=0$.
+Then, $\sum_i x(i) = |T\oplus T'|$ measures the difference between $T$ and $T'$.
+The following IP solves the \minapproxdesc{} problem.
+\begin{eqnarray}
+\nonumber
+\min \alpha \sum_{\mathbf{j}\in\mathcal{C}^k} y(\mathbf{j}) + 
+\beta \sum_{\mathbf{j}\in\mathcal{C}^k} z(\mathbf{j}) && \\
+\label{eqn1-prime}
+\forall i\in T,\ \sum_{\mathbf{j}\in\mathcal{C}^k_i} y(\mathbf{j}) + x(i) &\geq& 1\\
+\label{eqn2-prime}
+\forall i\in T,\ \mathbf{j}\in\mathcal{C}^k_i,\ z(\mathbf{j}) &\leq& x(i)\\
+\label{eqn3-prime}
+\forall i\not\in T, \mathbf{j}\in \mathcal{C}^k_i\ \sum_{\mathbf{j'}\in\mathcal{C}^k_i} z(\mathbf{j'}) + x(i) &\geq& y(\mathbf{j})\\
+\label{eqn:relax}
+\sum_{i\in T} x(i) &\leq& \gamma|T|\\
+\nonumber
+\forall \mathbf{j}\in \mathcal{C}^k,\ y(\mathbf{j}), z(\mathbf{j}) &\in& \{0, 1\}
+\end{eqnarray}
+
+The correctness of the above program follows on the same lines as that for \mindesc{}.
+The only difference is that if $x(i)=1$ for some $i\in T$, that element does not have
+to be covered. Therefore, unlike inequality (\ref{eqn1}), 
+$\sum_{\mathbf{j}\in\mathcal{C}^k_i} y(\mathbf{j})\geq 1-x(i)$ is sufficient now.
+Similarly, $z(\mathbf{j})$ could now be $1$ for such an $i\in T$ if $x(i)=1$. Therefore,
+we have inequalities (\ref{eqn2-prime}) instead of (\ref{eqn2}).
+Finally, for $i\not\in T$, if it is covered by some $y(\mathbf{j})=1$, for
+$\mathbf{j}\in \mathcal{C}^k_i$, it does not have to be accounted for, if $x(i)=1$;
+therefore, inequalities (\ref{eqn3-prime}) have $x(i)$ on the left side,
+in contrast with (\ref{eqn3}). We solve the above program in the same way,
+for different values of $\gamma$, which determines the $y(\mathbf{j}), z(\mathbf{j})$
+variables set to 1. These are then used to construct descriptions for the set $T$.
+
+
