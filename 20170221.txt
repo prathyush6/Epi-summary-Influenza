@@ -1,0 +1,1938 @@
+2017-01-21
+Our approach : KS, NY, WA, and states with high activity two weeks back, excluding OR and UT. (covers 18 elements)
+high is not part of any frequent pattern. Therefore, has no discernable representation from Apriori algorithm.
+
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -I -N 10 -T 0 -C 0.6 -D 0.05 -U 0.8 -M 0.1 -S -1.0 -c -1
+Relation:     attr_arm
+Instances:    51
+Attributes:   42
+              high
+              low
+              minimal
+              moderate
+              has_been_stable
+              has_decreased
+              has_increased
+              will_be_stable
+              will_decrease
+              will_increase
+              was_high
+              was_low
+              was_minimal
+              was_moderate
+              was1_high
+              was1_low
+              was1_minimal
+              was1_moderate
+              was2_high
+              was2_low
+              was2_minimal
+              was2_moderate
+              was3_high
+              was3_low
+              was3_minimal
+              was3_moderate
+              was4_high
+              was4_low
+              was4_minimal
+              was4_moderate
+              was52_high
+              was52_low
+              was52_minimal
+              was52_moderate
+              FWST
+              GLAK
+              MEST
+              NENG
+              PLNS
+              RKMT
+              SEST
+              SWST
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.8 (41 instances)
+Minimum metric <confidence>: 0.6
+Number of cycles performed: 4
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 28
+
+Large Itemsets L(1):
+high=no 41
+moderate=no 41
+has_decreased=no 47
+will_decrease=no 43
+was_high=no 48
+was1_high=no 45
+was1_low=no 42
+was1_moderate=no 45
+was2_high=no 42
+was2_low=no 43
+was2_moderate=no 46
+was3_high=no 48
+was3_low=no 46
+was3_moderate=no 46
+was4_high=no 50
+was4_low=no 43
+was4_moderate=no 50
+was52_high=no 51
+was52_low=no 47
+was52_minimal=yes 45
+was52_moderate=no 50
+FWST=no 45
+GLAK=no 46
+MEST=no 45
+NENG=no 45
+PLNS=no 44
+RKMT=no 46
+SWST=no 47
+
+Size of set of large itemsets L(2): 201
+
+Large Itemsets L(2):
+high=no was_high=no 41
+high=no was4_high=no 41
+high=no was4_moderate=no 41
+high=no was52_high=no 41
+moderate=no was52_high=no 41
+has_decreased=no was_high=no 44
+has_decreased=no was1_high=no 41
+has_decreased=no was1_moderate=no 41
+has_decreased=no was2_moderate=no 42
+has_decreased=no was3_high=no 44
+has_decreased=no was3_low=no 43
+has_decreased=no was3_moderate=no 42
+has_decreased=no was4_high=no 46
+has_decreased=no was4_moderate=no 46
+has_decreased=no was52_high=no 47
+has_decreased=no was52_low=no 43
+has_decreased=no was52_minimal=yes 41
+has_decreased=no was52_moderate=no 46
+has_decreased=no FWST=no 44
+has_decreased=no GLAK=no 42
+has_decreased=no MEST=no 41
+has_decreased=no NENG=no 41
+has_decreased=no RKMT=no 43
+has_decreased=no SWST=no 43
+will_decrease=no was3_high=no 41
+will_decrease=no was4_high=no 42
+will_decrease=no was4_moderate=no 42
+will_decrease=no was52_high=no 43
+will_decrease=no was52_moderate=no 42
+will_decrease=no RKMT=no 41
+was_high=no was1_high=no 44
+was_high=no was1_moderate=no 43
+was_high=no was2_high=no 41
+was_high=no was2_moderate=no 44
+was_high=no was3_high=no 45
+was_high=no was3_low=no 43
+was_high=no was3_moderate=no 45
+was_high=no was4_high=no 48
+was_high=no was4_low=no 41
+was_high=no was4_moderate=no 47
+was_high=no was52_high=no 48
+was_high=no was52_low=no 44
+was_high=no was52_minimal=yes 42
+was_high=no was52_moderate=no 47
+was_high=no FWST=no 42
+was_high=no GLAK=no 43
+was_high=no MEST=no 44
+was_high=no NENG=no 42
+was_high=no PLNS=no 41
+was_high=no RKMT=no 43
+was_high=no SWST=no 45
+was1_high=no was2_high=no 42
+was1_high=no was3_high=no 43
+was1_high=no was3_moderate=no 42
+was1_high=no was4_high=no 45
+was1_high=no was4_moderate=no 45
+was1_high=no was52_high=no 45
+was1_high=no was52_low=no 41
+was1_high=no was52_moderate=no 44
+was1_high=no SWST=no 42
+was1_low=no was4_high=no 41
+was1_low=no was4_moderate=no 41
+was1_low=no was52_high=no 42
+was1_low=no was52_moderate=no 41
+was1_moderate=no was2_moderate=no 44
+was1_moderate=no was3_high=no 43
+was1_moderate=no was3_low=no 42
+was1_moderate=no was3_moderate=no 42
+was1_moderate=no was4_high=no 44
+was1_moderate=no was4_moderate=no 44
+was1_moderate=no was52_high=no 45
+was1_moderate=no was52_low=no 42
+was1_moderate=no was52_moderate=no 44
+was1_moderate=no RKMT=no 41
+was1_moderate=no SWST=no 41
+was2_high=no was3_high=no 41
+was2_high=no was3_moderate=no 41
+was2_high=no was4_high=no 42
+was2_high=no was4_moderate=no 42
+was2_high=no was52_high=no 42
+was2_high=no was52_moderate=no 41
+was2_low=no was4_high=no 42
+was2_low=no was4_moderate=no 42
+was2_low=no was52_high=no 43
+was2_low=no was52_low=no 41
+was2_low=no was52_moderate=no 42
+was2_moderate=no was3_high=no 44
+was2_moderate=no was3_low=no 43
+was2_moderate=no was3_moderate=no 42
+was2_moderate=no was4_high=no 45
+was2_moderate=no was4_low=no 41
+was2_moderate=no was4_moderate=no 45
+was2_moderate=no was52_high=no 46
+was2_moderate=no was52_low=no 43
+was2_moderate=no was52_minimal=yes 41
+was2_moderate=no was52_moderate=no 45
+was2_moderate=no FWST=no 41
+was2_moderate=no GLAK=no 41
+was2_moderate=no MEST=no 41
+was2_moderate=no RKMT=no 41
+was2_moderate=no SWST=no 42
+was3_high=no was3_low=no 43
+was3_high=no was3_moderate=no 43
+was3_high=no was4_high=no 47
+was3_high=no was4_low=no 42
+was3_high=no was4_moderate=no 48
+was3_high=no was52_high=no 48
+was3_high=no was52_low=no 44
+was3_high=no was52_minimal=yes 42
+was3_high=no was52_moderate=no 47
+was3_high=no FWST=no 42
+was3_high=no GLAK=no 43
+was3_high=no MEST=no 42
+was3_high=no NENG=no 42
+was3_high=no PLNS=no 41
+was3_high=no RKMT=no 43
+was3_high=no SWST=no 44
+was3_low=no was3_moderate=no 41
+was3_low=no was4_high=no 45
+was3_low=no was4_low=no 41
+was3_low=no was4_moderate=no 45
+was3_low=no was52_high=no 46
+was3_low=no was52_low=no 44
+was3_low=no was52_minimal=yes 42
+was3_low=no was52_moderate=no 45
+was3_low=no FWST=no 42
+was3_low=no GLAK=no 41
+was3_low=no RKMT=no 42
+was3_low=no SWST=no 43
+was3_moderate=no was4_high=no 46
+was3_moderate=no was4_moderate=no 45
+was3_moderate=no was52_high=no 46
+was3_moderate=no was52_low=no 42
+was3_moderate=no was52_moderate=no 45
+was3_moderate=no GLAK=no 41
+was3_moderate=no MEST=no 41
+was3_moderate=no RKMT=no 42
+was3_moderate=no SWST=no 43
+was4_high=no was4_low=no 42
+was4_high=no was4_moderate=no 49
+was4_high=no was52_high=no 50
+was4_high=no was52_low=no 46
+was4_high=no was52_minimal=yes 44
+was4_high=no was52_moderate=no 49
+was4_high=no FWST=no 44
+was4_high=no GLAK=no 45
+was4_high=no MEST=no 44
+was4_high=no NENG=no 44
+was4_high=no PLNS=no 43
+was4_high=no RKMT=no 45
+was4_high=no SWST=no 47
+was4_low=no was4_moderate=no 42
+was4_low=no was52_high=no 43
+was4_low=no was52_low=no 41
+was4_low=no was52_moderate=no 42
+was4_moderate=no was52_high=no 50
+was4_moderate=no was52_low=no 46
+was4_moderate=no was52_minimal=yes 44
+was4_moderate=no was52_moderate=no 49
+was4_moderate=no FWST=no 44
+was4_moderate=no GLAK=no 45
+was4_moderate=no MEST=no 44
+was4_moderate=no NENG=no 44
+was4_moderate=no PLNS=no 43
+was4_moderate=no RKMT=no 45
+was4_moderate=no SWST=no 46
+was52_high=no was52_low=no 47
+was52_high=no was52_minimal=yes 45
+was52_high=no was52_moderate=no 50
+was52_high=no FWST=no 45
+was52_high=no GLAK=no 46
+was52_high=no MEST=no 45
+was52_high=no NENG=no 45
+was52_high=no PLNS=no 44
+was52_high=no RKMT=no 46
+was52_high=no SWST=no 47
+was52_low=no was52_minimal=yes 45
+was52_low=no was52_moderate=no 46
+was52_low=no FWST=no 41
+was52_low=no GLAK=no 43
+was52_low=no MEST=no 41
+was52_low=no NENG=no 42
+was52_low=no RKMT=no 42
+was52_low=no SWST=no 44
+was52_minimal=yes was52_moderate=no 45
+was52_minimal=yes GLAK=no 41
+was52_minimal=yes MEST=no 41
+was52_minimal=yes SWST=no 42
+was52_moderate=no FWST=no 44
+was52_moderate=no GLAK=no 45
+was52_moderate=no MEST=no 45
+was52_moderate=no NENG=no 44
+was52_moderate=no PLNS=no 43
+was52_moderate=no RKMT=no 45
+was52_moderate=no SWST=no 46
+FWST=no SWST=no 41
+GLAK=no RKMT=no 41
+GLAK=no SWST=no 42
+MEST=no SWST=no 41
+NENG=no SWST=no 41
+RKMT=no SWST=no 42
+
+Size of set of large itemsets L(3): 517
+
+Large Itemsets L(3):
+high=no was_high=no was4_high=no 41
+high=no was_high=no was4_moderate=no 41
+high=no was_high=no was52_high=no 41
+high=no was4_high=no was4_moderate=no 41
+high=no was4_high=no was52_high=no 41
+high=no was4_moderate=no was52_high=no 41
+has_decreased=no was_high=no was3_high=no 41
+has_decreased=no was_high=no was3_moderate=no 41
+has_decreased=no was_high=no was4_high=no 44
+has_decreased=no was_high=no was4_moderate=no 43
+has_decreased=no was_high=no was52_high=no 44
+has_decreased=no was_high=no was52_moderate=no 43
+has_decreased=no was_high=no FWST=no 41
+has_decreased=no was_high=no SWST=no 41
+has_decreased=no was1_high=no was4_high=no 41
+has_decreased=no was1_high=no was4_moderate=no 41
+has_decreased=no was1_high=no was52_high=no 41
+has_decreased=no was1_moderate=no was52_high=no 41
+has_decreased=no was2_moderate=no was4_high=no 41
+has_decreased=no was2_moderate=no was4_moderate=no 41
+has_decreased=no was2_moderate=no was52_high=no 42
+has_decreased=no was2_moderate=no was52_moderate=no 41
+has_decreased=no was3_high=no was4_high=no 43
+has_decreased=no was3_high=no was4_moderate=no 44
+has_decreased=no was3_high=no was52_high=no 44
+has_decreased=no was3_high=no was52_moderate=no 43
+has_decreased=no was3_high=no FWST=no 41
+has_decreased=no was3_low=no was4_high=no 42
+has_decreased=no was3_low=no was4_moderate=no 42
+has_decreased=no was3_low=no was52_high=no 43
+has_decreased=no was3_low=no was52_low=no 41
+has_decreased=no was3_low=no was52_moderate=no 42
+has_decreased=no was3_low=no FWST=no 41
+has_decreased=no was3_moderate=no was4_high=no 42
+has_decreased=no was3_moderate=no was4_moderate=no 41
+has_decreased=no was3_moderate=no was52_high=no 42
+has_decreased=no was3_moderate=no was52_moderate=no 41
+has_decreased=no was4_high=no was4_moderate=no 45
+has_decreased=no was4_high=no was52_high=no 46
+has_decreased=no was4_high=no was52_low=no 42
+has_decreased=no was4_high=no was52_moderate=no 45
+has_decreased=no was4_high=no FWST=no 43
+has_decreased=no was4_high=no GLAK=no 41
+has_decreased=no was4_high=no RKMT=no 42
+has_decreased=no was4_high=no SWST=no 43
+has_decreased=no was4_moderate=no was52_high=no 46
+has_decreased=no was4_moderate=no was52_low=no 42
+has_decreased=no was4_moderate=no was52_moderate=no 45
+has_decreased=no was4_moderate=no FWST=no 43
+has_decreased=no was4_moderate=no GLAK=no 41
+has_decreased=no was4_moderate=no RKMT=no 42
+has_decreased=no was4_moderate=no SWST=no 42
+has_decreased=no was52_high=no was52_low=no 43
+has_decreased=no was52_high=no was52_minimal=yes 41
+has_decreased=no was52_high=no was52_moderate=no 46
+has_decreased=no was52_high=no FWST=no 44
+has_decreased=no was52_high=no GLAK=no 42
+has_decreased=no was52_high=no MEST=no 41
+has_decreased=no was52_high=no NENG=no 41
+has_decreased=no was52_high=no RKMT=no 43
+has_decreased=no was52_high=no SWST=no 43
+has_decreased=no was52_low=no was52_minimal=yes 41
+has_decreased=no was52_low=no was52_moderate=no 42
+has_decreased=no was52_minimal=yes was52_moderate=no 41
+has_decreased=no was52_moderate=no FWST=no 43
+has_decreased=no was52_moderate=no GLAK=no 41
+has_decreased=no was52_moderate=no MEST=no 41
+has_decreased=no was52_moderate=no RKMT=no 42
+has_decreased=no was52_moderate=no SWST=no 42
+will_decrease=no was3_high=no was4_moderate=no 41
+will_decrease=no was3_high=no was52_high=no 41
+will_decrease=no was4_high=no was4_moderate=no 41
+will_decrease=no was4_high=no was52_high=no 42
+will_decrease=no was4_high=no was52_moderate=no 41
+will_decrease=no was4_moderate=no was52_high=no 42
+will_decrease=no was4_moderate=no was52_moderate=no 41
+will_decrease=no was52_high=no was52_moderate=no 42
+will_decrease=no was52_high=no RKMT=no 41
+was_high=no was1_high=no was2_high=no 41
+was_high=no was1_high=no was3_high=no 42
+was_high=no was1_high=no was3_moderate=no 41
+was_high=no was1_high=no was4_high=no 44
+was_high=no was1_high=no was4_moderate=no 44
+was_high=no was1_high=no was52_high=no 44
+was_high=no was1_high=no was52_moderate=no 43
+was_high=no was1_high=no SWST=no 41
+was_high=no was1_moderate=no was2_moderate=no 42
+was_high=no was1_moderate=no was3_high=no 41
+was_high=no was1_moderate=no was3_moderate=no 42
+was_high=no was1_moderate=no was4_high=no 43
+was_high=no was1_moderate=no was4_moderate=no 42
+was_high=no was1_moderate=no was52_high=no 43
+was_high=no was1_moderate=no was52_moderate=no 42
+was_high=no was2_high=no was4_high=no 41
+was_high=no was2_high=no was4_moderate=no 41
+was_high=no was2_high=no was52_high=no 41
+was_high=no was2_moderate=no was3_high=no 42
+was_high=no was2_moderate=no was3_low=no 41
+was_high=no was2_moderate=no was3_moderate=no 42
+was_high=no was2_moderate=no was4_high=no 44
+was_high=no was2_moderate=no was4_moderate=no 43
+was_high=no was2_moderate=no was52_high=no 44
+was_high=no was2_moderate=no was52_low=no 41
+was_high=no was2_moderate=no was52_moderate=no 43
+was_high=no was2_moderate=no SWST=no 41
+was_high=no was3_high=no was3_moderate=no 42
+was_high=no was3_high=no was4_high=no 45
+was_high=no was3_high=no was4_moderate=no 45
+was_high=no was3_high=no was52_high=no 45
+was_high=no was3_high=no was52_low=no 41
+was_high=no was3_high=no was52_moderate=no 44
+was_high=no was3_high=no MEST=no 41
+was_high=no was3_high=no SWST=no 42
+was_high=no was3_low=no was4_high=no 43
+was_high=no was3_low=no was4_moderate=no 42
+was_high=no was3_low=no was52_high=no 43
+was_high=no was3_low=no was52_low=no 41
+was_high=no was3_low=no was52_moderate=no 42
+was_high=no was3_low=no SWST=no 41
+was_high=no was3_moderate=no was4_high=no 45
+was_high=no was3_moderate=no was4_moderate=no 44
+was_high=no was3_moderate=no was52_high=no 45
+was_high=no was3_moderate=no was52_low=no 41
+was_high=no was3_moderate=no was52_moderate=no 44
+was_high=no was3_moderate=no MEST=no 41
+was_high=no was3_moderate=no RKMT=no 41
+was_high=no was3_moderate=no SWST=no 42
+was_high=no was4_high=no was4_low=no 41
+was_high=no was4_high=no was4_moderate=no 47
+was_high=no was4_high=no was52_high=no 48
+was_high=no was4_high=no was52_low=no 44
+was_high=no was4_high=no was52_minimal=yes 42
+was_high=no was4_high=no was52_moderate=no 47
+was_high=no was4_high=no FWST=no 42
+was_high=no was4_high=no GLAK=no 43
+was_high=no was4_high=no MEST=no 44
+was_high=no was4_high=no NENG=no 42
+was_high=no was4_high=no PLNS=no 41
+was_high=no was4_high=no RKMT=no 43
+was_high=no was4_high=no SWST=no 45
+was_high=no was4_low=no was52_high=no 41
+was_high=no was4_moderate=no was52_high=no 47
+was_high=no was4_moderate=no was52_low=no 43
+was_high=no was4_moderate=no was52_minimal=yes 41
+was_high=no was4_moderate=no was52_moderate=no 46
+was_high=no was4_moderate=no FWST=no 41
+was_high=no was4_moderate=no GLAK=no 42
+was_high=no was4_moderate=no MEST=no 43
+was_high=no was4_moderate=no NENG=no 41
+was_high=no was4_moderate=no RKMT=no 42
+was_high=no was4_moderate=no SWST=no 44
+was_high=no was52_high=no was52_low=no 44
+was_high=no was52_high=no was52_minimal=yes 42
+was_high=no was52_high=no was52_moderate=no 47
+was_high=no was52_high=no FWST=no 42
+was_high=no was52_high=no GLAK=no 43
+was_high=no was52_high=no MEST=no 44
+was_high=no was52_high=no NENG=no 42
+was_high=no was52_high=no PLNS=no 41
+was_high=no was52_high=no RKMT=no 43
+was_high=no was52_high=no SWST=no 45
+was_high=no was52_low=no was52_minimal=yes 42
+was_high=no was52_low=no was52_moderate=no 43
+was_high=no was52_low=no SWST=no 42
+was_high=no was52_minimal=yes was52_moderate=no 42
+was_high=no was52_moderate=no FWST=no 41
+was_high=no was52_moderate=no GLAK=no 42
+was_high=no was52_moderate=no MEST=no 44
+was_high=no was52_moderate=no NENG=no 41
+was_high=no was52_moderate=no RKMT=no 42
+was_high=no was52_moderate=no SWST=no 44
+was_high=no MEST=no SWST=no 41
+was1_high=no was2_high=no was3_high=no 41
+was1_high=no was2_high=no was3_moderate=no 41
+was1_high=no was2_high=no was4_high=no 42
+was1_high=no was2_high=no was4_moderate=no 42
+was1_high=no was2_high=no was52_high=no 42
+was1_high=no was2_high=no was52_moderate=no 41
+was1_high=no was3_high=no was4_high=no 43
+was1_high=no was3_high=no was4_moderate=no 43
+was1_high=no was3_high=no was52_high=no 43
+was1_high=no was3_high=no was52_moderate=no 42
+was1_high=no was3_moderate=no was4_high=no 42
+was1_high=no was3_moderate=no was4_moderate=no 42
+was1_high=no was3_moderate=no was52_high=no 42
+was1_high=no was3_moderate=no was52_moderate=no 41
+was1_high=no was4_high=no was4_moderate=no 45
+was1_high=no was4_high=no was52_high=no 45
+was1_high=no was4_high=no was52_low=no 41
+was1_high=no was4_high=no was52_moderate=no 44
+was1_high=no was4_high=no SWST=no 42
+was1_high=no was4_moderate=no was52_high=no 45
+was1_high=no was4_moderate=no was52_low=no 41
+was1_high=no was4_moderate=no was52_moderate=no 44
+was1_high=no was4_moderate=no SWST=no 42
+was1_high=no was52_high=no was52_low=no 41
+was1_high=no was52_high=no was52_moderate=no 44
+was1_high=no was52_high=no SWST=no 42
+was1_high=no was52_moderate=no SWST=no 41
+was1_low=no was4_high=no was52_high=no 41
+was1_low=no was4_moderate=no was52_high=no 41
+was1_low=no was52_high=no was52_moderate=no 41
+was1_moderate=no was2_moderate=no was3_high=no 43
+was1_moderate=no was2_moderate=no was3_low=no 41
+was1_moderate=no was2_moderate=no was3_moderate=no 41
+was1_moderate=no was2_moderate=no was4_high=no 43
+was1_moderate=no was2_moderate=no was4_moderate=no 43
+was1_moderate=no was2_moderate=no was52_high=no 44
+was1_moderate=no was2_moderate=no was52_low=no 41
+was1_moderate=no was2_moderate=no was52_moderate=no 43
+was1_moderate=no was3_high=no was4_high=no 42
+was1_moderate=no was3_high=no was4_moderate=no 43
+was1_moderate=no was3_high=no was52_high=no 43
+was1_moderate=no was3_high=no was52_moderate=no 42
+was1_moderate=no was3_low=no was4_high=no 41
+was1_moderate=no was3_low=no was4_moderate=no 41
+was1_moderate=no was3_low=no was52_high=no 42
+was1_moderate=no was3_low=no was52_moderate=no 41
+was1_moderate=no was3_moderate=no was4_high=no 42
+was1_moderate=no was3_moderate=no was4_moderate=no 41
+was1_moderate=no was3_moderate=no was52_high=no 42
+was1_moderate=no was3_moderate=no was52_moderate=no 41
+was1_moderate=no was4_high=no was4_moderate=no 43
+was1_moderate=no was4_high=no was52_high=no 44
+was1_moderate=no was4_high=no was52_low=no 41
+was1_moderate=no was4_high=no was52_moderate=no 43
+was1_moderate=no was4_high=no SWST=no 41
+was1_moderate=no was4_moderate=no was52_high=no 44
+was1_moderate=no was4_moderate=no was52_low=no 41
+was1_moderate=no was4_moderate=no was52_moderate=no 43
+was1_moderate=no was52_high=no was52_low=no 42
+was1_moderate=no was52_high=no was52_moderate=no 44
+was1_moderate=no was52_high=no RKMT=no 41
+was1_moderate=no was52_high=no SWST=no 41
+was1_moderate=no was52_low=no was52_moderate=no 41
+was2_high=no was3_high=no was4_high=no 41
+was2_high=no was3_high=no was4_moderate=no 41
+was2_high=no was3_high=no was52_high=no 41
+was2_high=no was3_moderate=no was4_high=no 41
+was2_high=no was3_moderate=no was4_moderate=no 41
+was2_high=no was3_moderate=no was52_high=no 41
+was2_high=no was4_high=no was4_moderate=no 42
+was2_high=no was4_high=no was52_high=no 42
+was2_high=no was4_high=no was52_moderate=no 41
+was2_high=no was4_moderate=no was52_high=no 42
+was2_high=no was4_moderate=no was52_moderate=no 41
+was2_high=no was52_high=no was52_moderate=no 41
+was2_low=no was4_high=no was4_moderate=no 41
+was2_low=no was4_high=no was52_high=no 42
+was2_low=no was4_high=no was52_moderate=no 41
+was2_low=no was4_moderate=no was52_high=no 42
+was2_low=no was4_moderate=no was52_moderate=no 41
+was2_low=no was52_high=no was52_low=no 41
+was2_low=no was52_high=no was52_moderate=no 42
+was2_moderate=no was3_high=no was3_low=no 41
+was2_moderate=no was3_high=no was4_high=no 43
+was2_moderate=no was3_high=no was4_moderate=no 44
+was2_moderate=no was3_high=no was52_high=no 44
+was2_moderate=no was3_high=no was52_low=no 41
+was2_moderate=no was3_high=no was52_moderate=no 43
+was2_moderate=no was3_low=no was4_high=no 42
+was2_moderate=no was3_low=no was4_moderate=no 42
+was2_moderate=no was3_low=no was52_high=no 43
+was2_moderate=no was3_low=no was52_low=no 41
+was2_moderate=no was3_low=no was52_moderate=no 42
+was2_moderate=no was3_moderate=no was4_high=no 42
+was2_moderate=no was3_moderate=no was4_moderate=no 41
+was2_moderate=no was3_moderate=no was52_high=no 42
+was2_moderate=no was3_moderate=no was52_moderate=no 41
+was2_moderate=no was4_high=no was4_moderate=no 44
+was2_moderate=no was4_high=no was52_high=no 45
+was2_moderate=no was4_high=no was52_low=no 42
+was2_moderate=no was4_high=no was52_moderate=no 44
+was2_moderate=no was4_high=no SWST=no 42
+was2_moderate=no was4_low=no was52_high=no 41
+was2_moderate=no was4_moderate=no was52_high=no 45
+was2_moderate=no was4_moderate=no was52_low=no 42
+was2_moderate=no was4_moderate=no was52_moderate=no 44
+was2_moderate=no was4_moderate=no SWST=no 41
+was2_moderate=no was52_high=no was52_low=no 43
+was2_moderate=no was52_high=no was52_minimal=yes 41
+was2_moderate=no was52_high=no was52_moderate=no 45
+was2_moderate=no was52_high=no FWST=no 41
+was2_moderate=no was52_high=no GLAK=no 41
+was2_moderate=no was52_high=no MEST=no 41
+was2_moderate=no was52_high=no RKMT=no 41
+was2_moderate=no was52_high=no SWST=no 42
+was2_moderate=no was52_low=no was52_minimal=yes 41
+was2_moderate=no was52_low=no was52_moderate=no 42
+was2_moderate=no was52_minimal=yes was52_moderate=no 41
+was2_moderate=no was52_moderate=no MEST=no 41
+was2_moderate=no was52_moderate=no SWST=no 41
+was3_high=no was3_low=no was4_high=no 42
+was3_high=no was3_low=no was4_moderate=no 43
+was3_high=no was3_low=no was52_high=no 43
+was3_high=no was3_low=no was52_low=no 41
+was3_high=no was3_low=no was52_moderate=no 42
+was3_high=no was3_moderate=no was4_high=no 43
+was3_high=no was3_moderate=no was4_moderate=no 43
+was3_high=no was3_moderate=no was52_high=no 43
+was3_high=no was3_moderate=no was52_moderate=no 42
+was3_high=no was4_high=no was4_low=no 41
+was3_high=no was4_high=no was4_moderate=no 47
+was3_high=no was4_high=no was52_high=no 47
+was3_high=no was4_high=no was52_low=no 43
+was3_high=no was4_high=no was52_minimal=yes 41
+was3_high=no was4_high=no was52_moderate=no 46
+was3_high=no was4_high=no FWST=no 41
+was3_high=no was4_high=no GLAK=no 42
+was3_high=no was4_high=no MEST=no 41
+was3_high=no was4_high=no NENG=no 41
+was3_high=no was4_high=no RKMT=no 42
+was3_high=no was4_high=no SWST=no 44
+was3_high=no was4_low=no was4_moderate=no 42
+was3_high=no was4_low=no was52_high=no 42
+was3_high=no was4_low=no was52_moderate=no 41
+was3_high=no was4_moderate=no was52_high=no 48
+was3_high=no was4_moderate=no was52_low=no 44
+was3_high=no was4_moderate=no was52_minimal=yes 42
+was3_high=no was4_moderate=no was52_moderate=no 47
+was3_high=no was4_moderate=no FWST=no 42
+was3_high=no was4_moderate=no GLAK=no 43
+was3_high=no was4_moderate=no MEST=no 42
+was3_high=no was4_moderate=no NENG=no 42
+was3_high=no was4_moderate=no PLNS=no 41
+was3_high=no was4_moderate=no RKMT=no 43
+was3_high=no was4_moderate=no SWST=no 44
+was3_high=no was52_high=no was52_low=no 44
+was3_high=no was52_high=no was52_minimal=yes 42
+was3_high=no was52_high=no was52_moderate=no 47
+was3_high=no was52_high=no FWST=no 42
+was3_high=no was52_high=no GLAK=no 43
+was3_high=no was52_high=no MEST=no 42
+was3_high=no was52_high=no NENG=no 42
+was3_high=no was52_high=no PLNS=no 41
+was3_high=no was52_high=no RKMT=no 43
+was3_high=no was52_high=no SWST=no 44
+was3_high=no was52_low=no was52_minimal=yes 42
+was3_high=no was52_low=no was52_moderate=no 43
+was3_high=no was52_low=no SWST=no 41
+was3_high=no was52_minimal=yes was52_moderate=no 42
+was3_high=no was52_moderate=no FWST=no 41
+was3_high=no was52_moderate=no GLAK=no 42
+was3_high=no was52_moderate=no MEST=no 42
+was3_high=no was52_moderate=no NENG=no 41
+was3_high=no was52_moderate=no RKMT=no 42
+was3_high=no was52_moderate=no SWST=no 43
+was3_low=no was3_moderate=no was4_high=no 41
+was3_low=no was3_moderate=no was52_high=no 41
+was3_low=no was4_high=no was4_moderate=no 44
+was3_low=no was4_high=no was52_high=no 45
+was3_low=no was4_high=no was52_low=no 43
+was3_low=no was4_high=no was52_minimal=yes 41
+was3_low=no was4_high=no was52_moderate=no 44
+was3_low=no was4_high=no FWST=no 41
+was3_low=no was4_high=no RKMT=no 41
+was3_low=no was4_high=no SWST=no 43
+was3_low=no was4_low=no was52_high=no 41
+was3_low=no was4_moderate=no was52_high=no 45
+was3_low=no was4_moderate=no was52_low=no 43
+was3_low=no was4_moderate=no was52_minimal=yes 41
+was3_low=no was4_moderate=no was52_moderate=no 44
+was3_low=no was4_moderate=no FWST=no 41
+was3_low=no was4_moderate=no RKMT=no 41
+was3_low=no was4_moderate=no SWST=no 42
+was3_low=no was52_high=no was52_low=no 44
+was3_low=no was52_high=no was52_minimal=yes 42
+was3_low=no was52_high=no was52_moderate=no 45
+was3_low=no was52_high=no FWST=no 42
+was3_low=no was52_high=no GLAK=no 41
+was3_low=no was52_high=no RKMT=no 42
+was3_low=no was52_high=no SWST=no 43
+was3_low=no was52_low=no was52_minimal=yes 42
+was3_low=no was52_low=no was52_moderate=no 43
+was3_low=no was52_low=no SWST=no 41
+was3_low=no was52_minimal=yes was52_moderate=no 42
+was3_low=no was52_moderate=no FWST=no 41
+was3_low=no was52_moderate=no RKMT=no 41
+was3_low=no was52_moderate=no SWST=no 42
+was3_moderate=no was4_high=no was4_moderate=no 45
+was3_moderate=no was4_high=no was52_high=no 46
+was3_moderate=no was4_high=no was52_low=no 42
+was3_moderate=no was4_high=no was52_moderate=no 45
+was3_moderate=no was4_high=no GLAK=no 41
+was3_moderate=no was4_high=no MEST=no 41
+was3_moderate=no was4_high=no RKMT=no 42
+was3_moderate=no was4_high=no SWST=no 43
+was3_moderate=no was4_moderate=no was52_high=no 45
+was3_moderate=no was4_moderate=no was52_low=no 41
+was3_moderate=no was4_moderate=no was52_moderate=no 44
+was3_moderate=no was4_moderate=no RKMT=no 41
+was3_moderate=no was4_moderate=no SWST=no 42
+was3_moderate=no was52_high=no was52_low=no 42
+was3_moderate=no was52_high=no was52_moderate=no 45
+was3_moderate=no was52_high=no GLAK=no 41
+was3_moderate=no was52_high=no MEST=no 41
+was3_moderate=no was52_high=no RKMT=no 42
+was3_moderate=no was52_high=no SWST=no 43
+was3_moderate=no was52_low=no was52_moderate=no 41
+was3_moderate=no was52_moderate=no MEST=no 41
+was3_moderate=no was52_moderate=no RKMT=no 41
+was3_moderate=no was52_moderate=no SWST=no 42
+was4_high=no was4_low=no was4_moderate=no 41
+was4_high=no was4_low=no was52_high=no 42
+was4_high=no was4_low=no was52_moderate=no 41
+was4_high=no was4_moderate=no was52_high=no 49
+was4_high=no was4_moderate=no was52_low=no 45
+was4_high=no was4_moderate=no was52_minimal=yes 43
+was4_high=no was4_moderate=no was52_moderate=no 48
+was4_high=no was4_moderate=no FWST=no 43
+was4_high=no was4_moderate=no GLAK=no 44
+was4_high=no was4_moderate=no MEST=no 43
+was4_high=no was4_moderate=no NENG=no 43
+was4_high=no was4_moderate=no PLNS=no 42
+was4_high=no was4_moderate=no RKMT=no 44
+was4_high=no was4_moderate=no SWST=no 46
+was4_high=no was52_high=no was52_low=no 46
+was4_high=no was52_high=no was52_minimal=yes 44
+was4_high=no was52_high=no was52_moderate=no 49
+was4_high=no was52_high=no FWST=no 44
+was4_high=no was52_high=no GLAK=no 45
+was4_high=no was52_high=no MEST=no 44
+was4_high=no was52_high=no NENG=no 44
+was4_high=no was52_high=no PLNS=no 43
+was4_high=no was52_high=no RKMT=no 45
+was4_high=no was52_high=no SWST=no 47
+was4_high=no was52_low=no was52_minimal=yes 44
+was4_high=no was52_low=no was52_moderate=no 45
+was4_high=no was52_low=no GLAK=no 42
+was4_high=no was52_low=no NENG=no 41
+was4_high=no was52_low=no RKMT=no 41
+was4_high=no was52_low=no SWST=no 44
+was4_high=no was52_minimal=yes was52_moderate=no 44
+was4_high=no was52_minimal=yes SWST=no 42
+was4_high=no was52_moderate=no FWST=no 43
+was4_high=no was52_moderate=no GLAK=no 44
+was4_high=no was52_moderate=no MEST=no 44
+was4_high=no was52_moderate=no NENG=no 43
+was4_high=no was52_moderate=no PLNS=no 42
+was4_high=no was52_moderate=no RKMT=no 44
+was4_high=no was52_moderate=no SWST=no 46
+was4_high=no FWST=no SWST=no 41
+was4_high=no GLAK=no SWST=no 42
+was4_high=no MEST=no SWST=no 41
+was4_high=no NENG=no SWST=no 41
+was4_high=no RKMT=no SWST=no 42
+was4_low=no was4_moderate=no was52_high=no 42
+was4_low=no was4_moderate=no was52_moderate=no 41
+was4_low=no was52_high=no was52_low=no 41
+was4_low=no was52_high=no was52_moderate=no 42
+was4_moderate=no was52_high=no was52_low=no 46
+was4_moderate=no was52_high=no was52_minimal=yes 44
+was4_moderate=no was52_high=no was52_moderate=no 49
+was4_moderate=no was52_high=no FWST=no 44
+was4_moderate=no was52_high=no GLAK=no 45
+was4_moderate=no was52_high=no MEST=no 44
+was4_moderate=no was52_high=no NENG=no 44
+was4_moderate=no was52_high=no PLNS=no 43
+was4_moderate=no was52_high=no RKMT=no 45
+was4_moderate=no was52_high=no SWST=no 46
+was4_moderate=no was52_low=no was52_minimal=yes 44
+was4_moderate=no was52_low=no was52_moderate=no 45
+was4_moderate=no was52_low=no GLAK=no 42
+was4_moderate=no was52_low=no NENG=no 41
+was4_moderate=no was52_low=no RKMT=no 41
+was4_moderate=no was52_low=no SWST=no 43
+was4_moderate=no was52_minimal=yes was52_moderate=no 44
+was4_moderate=no was52_minimal=yes SWST=no 41
+was4_moderate=no was52_moderate=no FWST=no 43
+was4_moderate=no was52_moderate=no GLAK=no 44
+was4_moderate=no was52_moderate=no MEST=no 44
+was4_moderate=no was52_moderate=no NENG=no 43
+was4_moderate=no was52_moderate=no PLNS=no 42
+was4_moderate=no was52_moderate=no RKMT=no 44
+was4_moderate=no was52_moderate=no SWST=no 45
+was4_moderate=no GLAK=no SWST=no 41
+was4_moderate=no RKMT=no SWST=no 41
+was52_high=no was52_low=no was52_minimal=yes 45
+was52_high=no was52_low=no was52_moderate=no 46
+was52_high=no was52_low=no FWST=no 41
+was52_high=no was52_low=no GLAK=no 43
+was52_high=no was52_low=no MEST=no 41
+was52_high=no was52_low=no NENG=no 42
+was52_high=no was52_low=no RKMT=no 42
+was52_high=no was52_low=no SWST=no 44
+was52_high=no was52_minimal=yes was52_moderate=no 45
+was52_high=no was52_minimal=yes GLAK=no 41
+was52_high=no was52_minimal=yes MEST=no 41
+was52_high=no was52_minimal=yes SWST=no 42
+was52_high=no was52_moderate=no FWST=no 44
+was52_high=no was52_moderate=no GLAK=no 45
+was52_high=no was52_moderate=no MEST=no 45
+was52_high=no was52_moderate=no NENG=no 44
+was52_high=no was52_moderate=no PLNS=no 43
+was52_high=no was52_moderate=no RKMT=no 45
+was52_high=no was52_moderate=no SWST=no 46
+was52_high=no FWST=no SWST=no 41
+was52_high=no GLAK=no RKMT=no 41
+was52_high=no GLAK=no SWST=no 42
+was52_high=no MEST=no SWST=no 41
+was52_high=no NENG=no SWST=no 41
+was52_high=no RKMT=no SWST=no 42
+was52_low=no was52_minimal=yes was52_moderate=no 45
+was52_low=no was52_minimal=yes GLAK=no 41
+was52_low=no was52_minimal=yes MEST=no 41
+was52_low=no was52_minimal=yes SWST=no 42
+was52_low=no was52_moderate=no GLAK=no 42
+was52_low=no was52_moderate=no MEST=no 41
+was52_low=no was52_moderate=no NENG=no 41
+was52_low=no was52_moderate=no RKMT=no 41
+was52_low=no was52_moderate=no SWST=no 43
+was52_minimal=yes was52_moderate=no GLAK=no 41
+was52_minimal=yes was52_moderate=no MEST=no 41
+was52_minimal=yes was52_moderate=no SWST=no 42
+was52_moderate=no GLAK=no SWST=no 41
+was52_moderate=no MEST=no SWST=no 41
+was52_moderate=no RKMT=no SWST=no 41
+
+Size of set of large itemsets L(4): 615
+
+Large Itemsets L(4):
+high=no was_high=no was4_high=no was4_moderate=no 41
+high=no was_high=no was4_high=no was52_high=no 41
+high=no was_high=no was4_moderate=no was52_high=no 41
+high=no was4_high=no was4_moderate=no was52_high=no 41
+has_decreased=no was_high=no was3_high=no was4_high=no 41
+has_decreased=no was_high=no was3_high=no was4_moderate=no 41
+has_decreased=no was_high=no was3_high=no was52_high=no 41
+has_decreased=no was_high=no was3_moderate=no was4_high=no 41
+has_decreased=no was_high=no was3_moderate=no was52_high=no 41
+has_decreased=no was_high=no was4_high=no was4_moderate=no 43
+has_decreased=no was_high=no was4_high=no was52_high=no 44
+has_decreased=no was_high=no was4_high=no was52_moderate=no 43
+has_decreased=no was_high=no was4_high=no FWST=no 41
+has_decreased=no was_high=no was4_high=no SWST=no 41
+has_decreased=no was_high=no was4_moderate=no was52_high=no 43
+has_decreased=no was_high=no was4_moderate=no was52_moderate=no 42
+has_decreased=no was_high=no was52_high=no was52_moderate=no 43
+has_decreased=no was_high=no was52_high=no FWST=no 41
+has_decreased=no was_high=no was52_high=no SWST=no 41
+has_decreased=no was1_high=no was4_high=no was4_moderate=no 41
+has_decreased=no was1_high=no was4_high=no was52_high=no 41
+has_decreased=no was1_high=no was4_moderate=no was52_high=no 41
+has_decreased=no was2_moderate=no was4_high=no was52_high=no 41
+has_decreased=no was2_moderate=no was4_moderate=no was52_high=no 41
+has_decreased=no was2_moderate=no was52_high=no was52_moderate=no 41
+has_decreased=no was3_high=no was4_high=no was4_moderate=no 43
+has_decreased=no was3_high=no was4_high=no was52_high=no 43
+has_decreased=no was3_high=no was4_high=no was52_moderate=no 42
+has_decreased=no was3_high=no was4_moderate=no was52_high=no 44
+has_decreased=no was3_high=no was4_moderate=no was52_moderate=no 43
+has_decreased=no was3_high=no was4_moderate=no FWST=no 41
+has_decreased=no was3_high=no was52_high=no was52_moderate=no 43
+has_decreased=no was3_high=no was52_high=no FWST=no 41
+has_decreased=no was3_low=no was4_high=no was4_moderate=no 41
+has_decreased=no was3_low=no was4_high=no was52_high=no 42
+has_decreased=no was3_low=no was4_high=no was52_moderate=no 41
+has_decreased=no was3_low=no was4_moderate=no was52_high=no 42
+has_decreased=no was3_low=no was4_moderate=no was52_moderate=no 41
+has_decreased=no was3_low=no was52_high=no was52_low=no 41
+has_decreased=no was3_low=no was52_high=no was52_moderate=no 42
+has_decreased=no was3_low=no was52_high=no FWST=no 41
+has_decreased=no was3_moderate=no was4_high=no was4_moderate=no 41
+has_decreased=no was3_moderate=no was4_high=no was52_high=no 42
+has_decreased=no was3_moderate=no was4_high=no was52_moderate=no 41
+has_decreased=no was3_moderate=no was4_moderate=no was52_high=no 41
+has_decreased=no was3_moderate=no was52_high=no was52_moderate=no 41
+has_decreased=no was4_high=no was4_moderate=no was52_high=no 45
+has_decreased=no was4_high=no was4_moderate=no was52_low=no 41
+has_decreased=no was4_high=no was4_moderate=no was52_moderate=no 44
+has_decreased=no was4_high=no was4_moderate=no FWST=no 42
+has_decreased=no was4_high=no was4_moderate=no RKMT=no 41
+has_decreased=no was4_high=no was4_moderate=no SWST=no 42
+has_decreased=no was4_high=no was52_high=no was52_low=no 42
+has_decreased=no was4_high=no was52_high=no was52_moderate=no 45
+has_decreased=no was4_high=no was52_high=no FWST=no 43
+has_decreased=no was4_high=no was52_high=no GLAK=no 41
+has_decreased=no was4_high=no was52_high=no RKMT=no 42
+has_decreased=no was4_high=no was52_high=no SWST=no 43
+has_decreased=no was4_high=no was52_low=no was52_moderate=no 41
+has_decreased=no was4_high=no was52_moderate=no FWST=no 42
+has_decreased=no was4_high=no was52_moderate=no RKMT=no 41
+has_decreased=no was4_high=no was52_moderate=no SWST=no 42
+has_decreased=no was4_moderate=no was52_high=no was52_low=no 42
+has_decreased=no was4_moderate=no was52_high=no was52_moderate=no 45
+has_decreased=no was4_moderate=no was52_high=no FWST=no 43
+has_decreased=no was4_moderate=no was52_high=no GLAK=no 41
+has_decreased=no was4_moderate=no was52_high=no RKMT=no 42
+has_decreased=no was4_moderate=no was52_high=no SWST=no 42
+has_decreased=no was4_moderate=no was52_low=no was52_moderate=no 41
+has_decreased=no was4_moderate=no was52_moderate=no FWST=no 42
+has_decreased=no was4_moderate=no was52_moderate=no RKMT=no 41
+has_decreased=no was4_moderate=no was52_moderate=no SWST=no 41
+has_decreased=no was52_high=no was52_low=no was52_minimal=yes 41
+has_decreased=no was52_high=no was52_low=no was52_moderate=no 42
+has_decreased=no was52_high=no was52_minimal=yes was52_moderate=no 41
+has_decreased=no was52_high=no was52_moderate=no FWST=no 43
+has_decreased=no was52_high=no was52_moderate=no GLAK=no 41
+has_decreased=no was52_high=no was52_moderate=no MEST=no 41
+has_decreased=no was52_high=no was52_moderate=no RKMT=no 42
+has_decreased=no was52_high=no was52_moderate=no SWST=no 42
+has_decreased=no was52_low=no was52_minimal=yes was52_moderate=no 41
+will_decrease=no was3_high=no was4_moderate=no was52_high=no 41
+will_decrease=no was4_high=no was4_moderate=no was52_high=no 41
+will_decrease=no was4_high=no was52_high=no was52_moderate=no 41
+will_decrease=no was4_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was1_high=no was2_high=no was4_high=no 41
+was_high=no was1_high=no was2_high=no was4_moderate=no 41
+was_high=no was1_high=no was2_high=no was52_high=no 41
+was_high=no was1_high=no was3_high=no was4_high=no 42
+was_high=no was1_high=no was3_high=no was4_moderate=no 42
+was_high=no was1_high=no was3_high=no was52_high=no 42
+was_high=no was1_high=no was3_high=no was52_moderate=no 41
+was_high=no was1_high=no was3_moderate=no was4_high=no 41
+was_high=no was1_high=no was3_moderate=no was4_moderate=no 41
+was_high=no was1_high=no was3_moderate=no was52_high=no 41
+was_high=no was1_high=no was4_high=no was4_moderate=no 44
+was_high=no was1_high=no was4_high=no was52_high=no 44
+was_high=no was1_high=no was4_high=no was52_moderate=no 43
+was_high=no was1_high=no was4_high=no SWST=no 41
+was_high=no was1_high=no was4_moderate=no was52_high=no 44
+was_high=no was1_high=no was4_moderate=no was52_moderate=no 43
+was_high=no was1_high=no was4_moderate=no SWST=no 41
+was_high=no was1_high=no was52_high=no was52_moderate=no 43
+was_high=no was1_high=no was52_high=no SWST=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_high=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_moderate=no 41
+was_high=no was1_moderate=no was2_moderate=no was4_high=no 42
+was_high=no was1_moderate=no was2_moderate=no was4_moderate=no 41
+was_high=no was1_moderate=no was2_moderate=no was52_high=no 42
+was_high=no was1_moderate=no was2_moderate=no was52_moderate=no 41
+was_high=no was1_moderate=no was3_high=no was4_high=no 41
+was_high=no was1_moderate=no was3_high=no was4_moderate=no 41
+was_high=no was1_moderate=no was3_high=no was52_high=no 41
+was_high=no was1_moderate=no was3_moderate=no was4_high=no 42
+was_high=no was1_moderate=no was3_moderate=no was4_moderate=no 41
+was_high=no was1_moderate=no was3_moderate=no was52_high=no 42
+was_high=no was1_moderate=no was3_moderate=no was52_moderate=no 41
+was_high=no was1_moderate=no was4_high=no was4_moderate=no 42
+was_high=no was1_moderate=no was4_high=no was52_high=no 43
+was_high=no was1_moderate=no was4_high=no was52_moderate=no 42
+was_high=no was1_moderate=no was4_moderate=no was52_high=no 42
+was_high=no was1_moderate=no was4_moderate=no was52_moderate=no 41
+was_high=no was1_moderate=no was52_high=no was52_moderate=no 42
+was_high=no was2_high=no was4_high=no was4_moderate=no 41
+was_high=no was2_high=no was4_high=no was52_high=no 41
+was_high=no was2_high=no was4_moderate=no was52_high=no 41
+was_high=no was2_moderate=no was3_high=no was4_high=no 42
+was_high=no was2_moderate=no was3_high=no was4_moderate=no 42
+was_high=no was2_moderate=no was3_high=no was52_high=no 42
+was_high=no was2_moderate=no was3_high=no was52_moderate=no 41
+was_high=no was2_moderate=no was3_low=no was4_high=no 41
+was_high=no was2_moderate=no was3_low=no was52_high=no 41
+was_high=no was2_moderate=no was3_moderate=no was4_high=no 42
+was_high=no was2_moderate=no was3_moderate=no was4_moderate=no 41
+was_high=no was2_moderate=no was3_moderate=no was52_high=no 42
+was_high=no was2_moderate=no was3_moderate=no was52_moderate=no 41
+was_high=no was2_moderate=no was4_high=no was4_moderate=no 43
+was_high=no was2_moderate=no was4_high=no was52_high=no 44
+was_high=no was2_moderate=no was4_high=no was52_low=no 41
+was_high=no was2_moderate=no was4_high=no was52_moderate=no 43
+was_high=no was2_moderate=no was4_high=no SWST=no 41
+was_high=no was2_moderate=no was4_moderate=no was52_high=no 43
+was_high=no was2_moderate=no was4_moderate=no was52_moderate=no 42
+was_high=no was2_moderate=no was52_high=no was52_low=no 41
+was_high=no was2_moderate=no was52_high=no was52_moderate=no 43
+was_high=no was2_moderate=no was52_high=no SWST=no 41
+was_high=no was3_high=no was3_moderate=no was4_high=no 42
+was_high=no was3_high=no was3_moderate=no was4_moderate=no 42
+was_high=no was3_high=no was3_moderate=no was52_high=no 42
+was_high=no was3_high=no was3_moderate=no was52_moderate=no 41
+was_high=no was3_high=no was4_high=no was4_moderate=no 45
+was_high=no was3_high=no was4_high=no was52_high=no 45
+was_high=no was3_high=no was4_high=no was52_low=no 41
+was_high=no was3_high=no was4_high=no was52_moderate=no 44
+was_high=no was3_high=no was4_high=no MEST=no 41
+was_high=no was3_high=no was4_high=no SWST=no 42
+was_high=no was3_high=no was4_moderate=no was52_high=no 45
+was_high=no was3_high=no was4_moderate=no was52_low=no 41
+was_high=no was3_high=no was4_moderate=no was52_moderate=no 44
+was_high=no was3_high=no was4_moderate=no MEST=no 41
+was_high=no was3_high=no was4_moderate=no SWST=no 42
+was_high=no was3_high=no was52_high=no was52_low=no 41
+was_high=no was3_high=no was52_high=no was52_moderate=no 44
+was_high=no was3_high=no was52_high=no MEST=no 41
+was_high=no was3_high=no was52_high=no SWST=no 42
+was_high=no was3_high=no was52_moderate=no MEST=no 41
+was_high=no was3_high=no was52_moderate=no SWST=no 41
+was_high=no was3_low=no was4_high=no was4_moderate=no 42
+was_high=no was3_low=no was4_high=no was52_high=no 43
+was_high=no was3_low=no was4_high=no was52_low=no 41
+was_high=no was3_low=no was4_high=no was52_moderate=no 42
+was_high=no was3_low=no was4_high=no SWST=no 41
+was_high=no was3_low=no was4_moderate=no was52_high=no 42
+was_high=no was3_low=no was4_moderate=no was52_moderate=no 41
+was_high=no was3_low=no was52_high=no was52_low=no 41
+was_high=no was3_low=no was52_high=no was52_moderate=no 42
+was_high=no was3_low=no was52_high=no SWST=no 41
+was_high=no was3_moderate=no was4_high=no was4_moderate=no 44
+was_high=no was3_moderate=no was4_high=no was52_high=no 45
+was_high=no was3_moderate=no was4_high=no was52_low=no 41
+was_high=no was3_moderate=no was4_high=no was52_moderate=no 44
+was_high=no was3_moderate=no was4_high=no MEST=no 41
+was_high=no was3_moderate=no was4_high=no RKMT=no 41
+was_high=no was3_moderate=no was4_high=no SWST=no 42
+was_high=no was3_moderate=no was4_moderate=no was52_high=no 44
+was_high=no was3_moderate=no was4_moderate=no was52_moderate=no 43
+was_high=no was3_moderate=no was4_moderate=no SWST=no 41
+was_high=no was3_moderate=no was52_high=no was52_low=no 41
+was_high=no was3_moderate=no was52_high=no was52_moderate=no 44
+was_high=no was3_moderate=no was52_high=no MEST=no 41
+was_high=no was3_moderate=no was52_high=no RKMT=no 41
+was_high=no was3_moderate=no was52_high=no SWST=no 42
+was_high=no was3_moderate=no was52_moderate=no MEST=no 41
+was_high=no was3_moderate=no was52_moderate=no SWST=no 41
+was_high=no was4_high=no was4_low=no was52_high=no 41
+was_high=no was4_high=no was4_moderate=no was52_high=no 47
+was_high=no was4_high=no was4_moderate=no was52_low=no 43
+was_high=no was4_high=no was4_moderate=no was52_minimal=yes 41
+was_high=no was4_high=no was4_moderate=no was52_moderate=no 46
+was_high=no was4_high=no was4_moderate=no FWST=no 41
+was_high=no was4_high=no was4_moderate=no GLAK=no 42
+was_high=no was4_high=no was4_moderate=no MEST=no 43
+was_high=no was4_high=no was4_moderate=no NENG=no 41
+was_high=no was4_high=no was4_moderate=no RKMT=no 42
+was_high=no was4_high=no was4_moderate=no SWST=no 44
+was_high=no was4_high=no was52_high=no was52_low=no 44
+was_high=no was4_high=no was52_high=no was52_minimal=yes 42
+was_high=no was4_high=no was52_high=no was52_moderate=no 47
+was_high=no was4_high=no was52_high=no FWST=no 42
+was_high=no was4_high=no was52_high=no GLAK=no 43
+was_high=no was4_high=no was52_high=no MEST=no 44
+was_high=no was4_high=no was52_high=no NENG=no 42
+was_high=no was4_high=no was52_high=no PLNS=no 41
+was_high=no was4_high=no was52_high=no RKMT=no 43
+was_high=no was4_high=no was52_high=no SWST=no 45
+was_high=no was4_high=no was52_low=no was52_minimal=yes 42
+was_high=no was4_high=no was52_low=no was52_moderate=no 43
+was_high=no was4_high=no was52_low=no SWST=no 42
+was_high=no was4_high=no was52_minimal=yes was52_moderate=no 42
+was_high=no was4_high=no was52_moderate=no FWST=no 41
+was_high=no was4_high=no was52_moderate=no GLAK=no 42
+was_high=no was4_high=no was52_moderate=no MEST=no 44
+was_high=no was4_high=no was52_moderate=no NENG=no 41
+was_high=no was4_high=no was52_moderate=no RKMT=no 42
+was_high=no was4_high=no was52_moderate=no SWST=no 44
+was_high=no was4_high=no MEST=no SWST=no 41
+was_high=no was4_moderate=no was52_high=no was52_low=no 43
+was_high=no was4_moderate=no was52_high=no was52_minimal=yes 41
+was_high=no was4_moderate=no was52_high=no was52_moderate=no 46
+was_high=no was4_moderate=no was52_high=no FWST=no 41
+was_high=no was4_moderate=no was52_high=no GLAK=no 42
+was_high=no was4_moderate=no was52_high=no MEST=no 43
+was_high=no was4_moderate=no was52_high=no NENG=no 41
+was_high=no was4_moderate=no was52_high=no RKMT=no 42
+was_high=no was4_moderate=no was52_high=no SWST=no 44
+was_high=no was4_moderate=no was52_low=no was52_minimal=yes 41
+was_high=no was4_moderate=no was52_low=no was52_moderate=no 42
+was_high=no was4_moderate=no was52_low=no SWST=no 41
+was_high=no was4_moderate=no was52_minimal=yes was52_moderate=no 41
+was_high=no was4_moderate=no was52_moderate=no GLAK=no 41
+was_high=no was4_moderate=no was52_moderate=no MEST=no 43
+was_high=no was4_moderate=no was52_moderate=no RKMT=no 41
+was_high=no was4_moderate=no was52_moderate=no SWST=no 43
+was_high=no was52_high=no was52_low=no was52_minimal=yes 42
+was_high=no was52_high=no was52_low=no was52_moderate=no 43
+was_high=no was52_high=no was52_low=no SWST=no 42
+was_high=no was52_high=no was52_minimal=yes was52_moderate=no 42
+was_high=no was52_high=no was52_moderate=no FWST=no 41
+was_high=no was52_high=no was52_moderate=no GLAK=no 42
+was_high=no was52_high=no was52_moderate=no MEST=no 44
+was_high=no was52_high=no was52_moderate=no NENG=no 41
+was_high=no was52_high=no was52_moderate=no RKMT=no 42
+was_high=no was52_high=no was52_moderate=no SWST=no 44
+was_high=no was52_high=no MEST=no SWST=no 41
+was_high=no was52_low=no was52_minimal=yes was52_moderate=no 42
+was_high=no was52_low=no was52_moderate=no SWST=no 41
+was_high=no was52_moderate=no MEST=no SWST=no 41
+was1_high=no was2_high=no was3_high=no was4_high=no 41
+was1_high=no was2_high=no was3_high=no was4_moderate=no 41
+was1_high=no was2_high=no was3_high=no was52_high=no 41
+was1_high=no was2_high=no was3_moderate=no was4_high=no 41
+was1_high=no was2_high=no was3_moderate=no was4_moderate=no 41
+was1_high=no was2_high=no was3_moderate=no was52_high=no 41
+was1_high=no was2_high=no was4_high=no was4_moderate=no 42
+was1_high=no was2_high=no was4_high=no was52_high=no 42
+was1_high=no was2_high=no was4_high=no was52_moderate=no 41
+was1_high=no was2_high=no was4_moderate=no was52_high=no 42
+was1_high=no was2_high=no was4_moderate=no was52_moderate=no 41
+was1_high=no was2_high=no was52_high=no was52_moderate=no 41
+was1_high=no was3_high=no was4_high=no was4_moderate=no 43
+was1_high=no was3_high=no was4_high=no was52_high=no 43
+was1_high=no was3_high=no was4_high=no was52_moderate=no 42
+was1_high=no was3_high=no was4_moderate=no was52_high=no 43
+was1_high=no was3_high=no was4_moderate=no was52_moderate=no 42
+was1_high=no was3_high=no was52_high=no was52_moderate=no 42
+was1_high=no was3_moderate=no was4_high=no was4_moderate=no 42
+was1_high=no was3_moderate=no was4_high=no was52_high=no 42
+was1_high=no was3_moderate=no was4_high=no was52_moderate=no 41
+was1_high=no was3_moderate=no was4_moderate=no was52_high=no 42
+was1_high=no was3_moderate=no was4_moderate=no was52_moderate=no 41
+was1_high=no was3_moderate=no was52_high=no was52_moderate=no 41
+was1_high=no was4_high=no was4_moderate=no was52_high=no 45
+was1_high=no was4_high=no was4_moderate=no was52_low=no 41
+was1_high=no was4_high=no was4_moderate=no was52_moderate=no 44
+was1_high=no was4_high=no was4_moderate=no SWST=no 42
+was1_high=no was4_high=no was52_high=no was52_low=no 41
+was1_high=no was4_high=no was52_high=no was52_moderate=no 44
+was1_high=no was4_high=no was52_high=no SWST=no 42
+was1_high=no was4_high=no was52_moderate=no SWST=no 41
+was1_high=no was4_moderate=no was52_high=no was52_low=no 41
+was1_high=no was4_moderate=no was52_high=no was52_moderate=no 44
+was1_high=no was4_moderate=no was52_high=no SWST=no 42
+was1_high=no was4_moderate=no was52_moderate=no SWST=no 41
+was1_high=no was52_high=no was52_moderate=no SWST=no 41
+was1_moderate=no was2_moderate=no was3_high=no was4_high=no 42
+was1_moderate=no was2_moderate=no was3_high=no was4_moderate=no 43
+was1_moderate=no was2_moderate=no was3_high=no was52_high=no 43
+was1_moderate=no was2_moderate=no was3_high=no was52_moderate=no 42
+was1_moderate=no was2_moderate=no was3_low=no was52_high=no 41
+was1_moderate=no was2_moderate=no was3_moderate=no was4_high=no 41
+was1_moderate=no was2_moderate=no was3_moderate=no was52_high=no 41
+was1_moderate=no was2_moderate=no was4_high=no was4_moderate=no 42
+was1_moderate=no was2_moderate=no was4_high=no was52_high=no 43
+was1_moderate=no was2_moderate=no was4_high=no was52_moderate=no 42
+was1_moderate=no was2_moderate=no was4_moderate=no was52_high=no 43
+was1_moderate=no was2_moderate=no was4_moderate=no was52_moderate=no 42
+was1_moderate=no was2_moderate=no was52_high=no was52_low=no 41
+was1_moderate=no was2_moderate=no was52_high=no was52_moderate=no 43
+was1_moderate=no was3_high=no was4_high=no was4_moderate=no 42
+was1_moderate=no was3_high=no was4_high=no was52_high=no 42
+was1_moderate=no was3_high=no was4_high=no was52_moderate=no 41
+was1_moderate=no was3_high=no was4_moderate=no was52_high=no 43
+was1_moderate=no was3_high=no was4_moderate=no was52_moderate=no 42
+was1_moderate=no was3_high=no was52_high=no was52_moderate=no 42
+was1_moderate=no was3_low=no was4_high=no was52_high=no 41
+was1_moderate=no was3_low=no was4_moderate=no was52_high=no 41
+was1_moderate=no was3_low=no was52_high=no was52_moderate=no 41
+was1_moderate=no was3_moderate=no was4_high=no was4_moderate=no 41
+was1_moderate=no was3_moderate=no was4_high=no was52_high=no 42
+was1_moderate=no was3_moderate=no was4_high=no was52_moderate=no 41
+was1_moderate=no was3_moderate=no was4_moderate=no was52_high=no 41
+was1_moderate=no was3_moderate=no was52_high=no was52_moderate=no 41
+was1_moderate=no was4_high=no was4_moderate=no was52_high=no 43
+was1_moderate=no was4_high=no was4_moderate=no was52_moderate=no 42
+was1_moderate=no was4_high=no was52_high=no was52_low=no 41
+was1_moderate=no was4_high=no was52_high=no was52_moderate=no 43
+was1_moderate=no was4_high=no was52_high=no SWST=no 41
+was1_moderate=no was4_moderate=no was52_high=no was52_low=no 41
+was1_moderate=no was4_moderate=no was52_high=no was52_moderate=no 43
+was1_moderate=no was52_high=no was52_low=no was52_moderate=no 41
+was2_high=no was3_high=no was4_high=no was4_moderate=no 41
+was2_high=no was3_high=no was4_high=no was52_high=no 41
+was2_high=no was3_high=no was4_moderate=no was52_high=no 41
+was2_high=no was3_moderate=no was4_high=no was4_moderate=no 41
+was2_high=no was3_moderate=no was4_high=no was52_high=no 41
+was2_high=no was3_moderate=no was4_moderate=no was52_high=no 41
+was2_high=no was4_high=no was4_moderate=no was52_high=no 42
+was2_high=no was4_high=no was4_moderate=no was52_moderate=no 41
+was2_high=no was4_high=no was52_high=no was52_moderate=no 41
+was2_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was2_low=no was4_high=no was4_moderate=no was52_high=no 41
+was2_low=no was4_high=no was52_high=no was52_moderate=no 41
+was2_low=no was4_moderate=no was52_high=no was52_moderate=no 41
+was2_moderate=no was3_high=no was3_low=no was4_moderate=no 41
+was2_moderate=no was3_high=no was3_low=no was52_high=no 41
+was2_moderate=no was3_high=no was4_high=no was4_moderate=no 43
+was2_moderate=no was3_high=no was4_high=no was52_high=no 43
+was2_moderate=no was3_high=no was4_high=no was52_moderate=no 42
+was2_moderate=no was3_high=no was4_moderate=no was52_high=no 44
+was2_moderate=no was3_high=no was4_moderate=no was52_low=no 41
+was2_moderate=no was3_high=no was4_moderate=no was52_moderate=no 43
+was2_moderate=no was3_high=no was52_high=no was52_low=no 41
+was2_moderate=no was3_high=no was52_high=no was52_moderate=no 43
+was2_moderate=no was3_low=no was4_high=no was4_moderate=no 41
+was2_moderate=no was3_low=no was4_high=no was52_high=no 42
+was2_moderate=no was3_low=no was4_high=no was52_moderate=no 41
+was2_moderate=no was3_low=no was4_moderate=no was52_high=no 42
+was2_moderate=no was3_low=no was4_moderate=no was52_moderate=no 41
+was2_moderate=no was3_low=no was52_high=no was52_low=no 41
+was2_moderate=no was3_low=no was52_high=no was52_moderate=no 42
+was2_moderate=no was3_moderate=no was4_high=no was4_moderate=no 41
+was2_moderate=no was3_moderate=no was4_high=no was52_high=no 42
+was2_moderate=no was3_moderate=no was4_high=no was52_moderate=no 41
+was2_moderate=no was3_moderate=no was4_moderate=no was52_high=no 41
+was2_moderate=no was3_moderate=no was52_high=no was52_moderate=no 41
+was2_moderate=no was4_high=no was4_moderate=no was52_high=no 44
+was2_moderate=no was4_high=no was4_moderate=no was52_low=no 41
+was2_moderate=no was4_high=no was4_moderate=no was52_moderate=no 43
+was2_moderate=no was4_high=no was4_moderate=no SWST=no 41
+was2_moderate=no was4_high=no was52_high=no was52_low=no 42
+was2_moderate=no was4_high=no was52_high=no was52_moderate=no 44
+was2_moderate=no was4_high=no was52_high=no SWST=no 42
+was2_moderate=no was4_high=no was52_low=no was52_moderate=no 41
+was2_moderate=no was4_high=no was52_moderate=no SWST=no 41
+was2_moderate=no was4_moderate=no was52_high=no was52_low=no 42
+was2_moderate=no was4_moderate=no was52_high=no was52_moderate=no 44
+was2_moderate=no was4_moderate=no was52_high=no SWST=no 41
+was2_moderate=no was4_moderate=no was52_low=no was52_moderate=no 41
+was2_moderate=no was52_high=no was52_low=no was52_minimal=yes 41
+was2_moderate=no was52_high=no was52_low=no was52_moderate=no 42
+was2_moderate=no was52_high=no was52_minimal=yes was52_moderate=no 41
+was2_moderate=no was52_high=no was52_moderate=no MEST=no 41
+was2_moderate=no was52_high=no was52_moderate=no SWST=no 41
+was2_moderate=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was3_high=no was3_low=no was4_high=no was4_moderate=no 42
+was3_high=no was3_low=no was4_high=no was52_high=no 42
+was3_high=no was3_low=no was4_high=no was52_moderate=no 41
+was3_high=no was3_low=no was4_moderate=no was52_high=no 43
+was3_high=no was3_low=no was4_moderate=no was52_low=no 41
+was3_high=no was3_low=no was4_moderate=no was52_moderate=no 42
+was3_high=no was3_low=no was52_high=no was52_low=no 41
+was3_high=no was3_low=no was52_high=no was52_moderate=no 42
+was3_high=no was3_moderate=no was4_high=no was4_moderate=no 43
+was3_high=no was3_moderate=no was4_high=no was52_high=no 43
+was3_high=no was3_moderate=no was4_high=no was52_moderate=no 42
+was3_high=no was3_moderate=no was4_moderate=no was52_high=no 43
+was3_high=no was3_moderate=no was4_moderate=no was52_moderate=no 42
+was3_high=no was3_moderate=no was52_high=no was52_moderate=no 42
+was3_high=no was4_high=no was4_low=no was4_moderate=no 41
+was3_high=no was4_high=no was4_low=no was52_high=no 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no 47
+was3_high=no was4_high=no was4_moderate=no was52_low=no 43
+was3_high=no was4_high=no was4_moderate=no was52_minimal=yes 41
+was3_high=no was4_high=no was4_moderate=no was52_moderate=no 46
+was3_high=no was4_high=no was4_moderate=no FWST=no 41
+was3_high=no was4_high=no was4_moderate=no GLAK=no 42
+was3_high=no was4_high=no was4_moderate=no MEST=no 41
+was3_high=no was4_high=no was4_moderate=no NENG=no 41
+was3_high=no was4_high=no was4_moderate=no RKMT=no 42
+was3_high=no was4_high=no was4_moderate=no SWST=no 44
+was3_high=no was4_high=no was52_high=no was52_low=no 43
+was3_high=no was4_high=no was52_high=no was52_minimal=yes 41
+was3_high=no was4_high=no was52_high=no was52_moderate=no 46
+was3_high=no was4_high=no was52_high=no FWST=no 41
+was3_high=no was4_high=no was52_high=no GLAK=no 42
+was3_high=no was4_high=no was52_high=no MEST=no 41
+was3_high=no was4_high=no was52_high=no NENG=no 41
+was3_high=no was4_high=no was52_high=no RKMT=no 42
+was3_high=no was4_high=no was52_high=no SWST=no 44
+was3_high=no was4_high=no was52_low=no was52_minimal=yes 41
+was3_high=no was4_high=no was52_low=no was52_moderate=no 42
+was3_high=no was4_high=no was52_low=no SWST=no 41
+was3_high=no was4_high=no was52_minimal=yes was52_moderate=no 41
+was3_high=no was4_high=no was52_moderate=no GLAK=no 41
+was3_high=no was4_high=no was52_moderate=no MEST=no 41
+was3_high=no was4_high=no was52_moderate=no RKMT=no 41
+was3_high=no was4_high=no was52_moderate=no SWST=no 43
+was3_high=no was4_low=no was4_moderate=no was52_high=no 42
+was3_high=no was4_low=no was4_moderate=no was52_moderate=no 41
+was3_high=no was4_low=no was52_high=no was52_moderate=no 41
+was3_high=no was4_moderate=no was52_high=no was52_low=no 44
+was3_high=no was4_moderate=no was52_high=no was52_minimal=yes 42
+was3_high=no was4_moderate=no was52_high=no was52_moderate=no 47
+was3_high=no was4_moderate=no was52_high=no FWST=no 42
+was3_high=no was4_moderate=no was52_high=no GLAK=no 43
+was3_high=no was4_moderate=no was52_high=no MEST=no 42
+was3_high=no was4_moderate=no was52_high=no NENG=no 42
+was3_high=no was4_moderate=no was52_high=no PLNS=no 41
+was3_high=no was4_moderate=no was52_high=no RKMT=no 43
+was3_high=no was4_moderate=no was52_high=no SWST=no 44
+was3_high=no was4_moderate=no was52_low=no was52_minimal=yes 42
+was3_high=no was4_moderate=no was52_low=no was52_moderate=no 43
+was3_high=no was4_moderate=no was52_low=no SWST=no 41
+was3_high=no was4_moderate=no was52_minimal=yes was52_moderate=no 42
+was3_high=no was4_moderate=no was52_moderate=no FWST=no 41
+was3_high=no was4_moderate=no was52_moderate=no GLAK=no 42
+was3_high=no was4_moderate=no was52_moderate=no MEST=no 42
+was3_high=no was4_moderate=no was52_moderate=no NENG=no 41
+was3_high=no was4_moderate=no was52_moderate=no RKMT=no 42
+was3_high=no was4_moderate=no was52_moderate=no SWST=no 43
+was3_high=no was52_high=no was52_low=no was52_minimal=yes 42
+was3_high=no was52_high=no was52_low=no was52_moderate=no 43
+was3_high=no was52_high=no was52_low=no SWST=no 41
+was3_high=no was52_high=no was52_minimal=yes was52_moderate=no 42
+was3_high=no was52_high=no was52_moderate=no FWST=no 41
+was3_high=no was52_high=no was52_moderate=no GLAK=no 42
+was3_high=no was52_high=no was52_moderate=no MEST=no 42
+was3_high=no was52_high=no was52_moderate=no NENG=no 41
+was3_high=no was52_high=no was52_moderate=no RKMT=no 42
+was3_high=no was52_high=no was52_moderate=no SWST=no 43
+was3_high=no was52_low=no was52_minimal=yes was52_moderate=no 42
+was3_low=no was3_moderate=no was4_high=no was52_high=no 41
+was3_low=no was4_high=no was4_moderate=no was52_high=no 44
+was3_low=no was4_high=no was4_moderate=no was52_low=no 42
+was3_low=no was4_high=no was4_moderate=no was52_moderate=no 43
+was3_low=no was4_high=no was4_moderate=no SWST=no 42
+was3_low=no was4_high=no was52_high=no was52_low=no 43
+was3_low=no was4_high=no was52_high=no was52_minimal=yes 41
+was3_low=no was4_high=no was52_high=no was52_moderate=no 44
+was3_low=no was4_high=no was52_high=no FWST=no 41
+was3_low=no was4_high=no was52_high=no RKMT=no 41
+was3_low=no was4_high=no was52_high=no SWST=no 43
+was3_low=no was4_high=no was52_low=no was52_minimal=yes 41
+was3_low=no was4_high=no was52_low=no was52_moderate=no 42
+was3_low=no was4_high=no was52_low=no SWST=no 41
+was3_low=no was4_high=no was52_minimal=yes was52_moderate=no 41
+was3_low=no was4_high=no was52_moderate=no SWST=no 42
+was3_low=no was4_moderate=no was52_high=no was52_low=no 43
+was3_low=no was4_moderate=no was52_high=no was52_minimal=yes 41
+was3_low=no was4_moderate=no was52_high=no was52_moderate=no 44
+was3_low=no was4_moderate=no was52_high=no FWST=no 41
+was3_low=no was4_moderate=no was52_high=no RKMT=no 41
+was3_low=no was4_moderate=no was52_high=no SWST=no 42
+was3_low=no was4_moderate=no was52_low=no was52_minimal=yes 41
+was3_low=no was4_moderate=no was52_low=no was52_moderate=no 42
+was3_low=no was4_moderate=no was52_minimal=yes was52_moderate=no 41
+was3_low=no was4_moderate=no was52_moderate=no SWST=no 41
+was3_low=no was52_high=no was52_low=no was52_minimal=yes 42
+was3_low=no was52_high=no was52_low=no was52_moderate=no 43
+was3_low=no was52_high=no was52_low=no SWST=no 41
+was3_low=no was52_high=no was52_minimal=yes was52_moderate=no 42
+was3_low=no was52_high=no was52_moderate=no FWST=no 41
+was3_low=no was52_high=no was52_moderate=no RKMT=no 41
+was3_low=no was52_high=no was52_moderate=no SWST=no 42
+was3_low=no was52_low=no was52_minimal=yes was52_moderate=no 42
+was3_moderate=no was4_high=no was4_moderate=no was52_high=no 45
+was3_moderate=no was4_high=no was4_moderate=no was52_low=no 41
+was3_moderate=no was4_high=no was4_moderate=no was52_moderate=no 44
+was3_moderate=no was4_high=no was4_moderate=no RKMT=no 41
+was3_moderate=no was4_high=no was4_moderate=no SWST=no 42
+was3_moderate=no was4_high=no was52_high=no was52_low=no 42
+was3_moderate=no was4_high=no was52_high=no was52_moderate=no 45
+was3_moderate=no was4_high=no was52_high=no GLAK=no 41
+was3_moderate=no was4_high=no was52_high=no MEST=no 41
+was3_moderate=no was4_high=no was52_high=no RKMT=no 42
+was3_moderate=no was4_high=no was52_high=no SWST=no 43
+was3_moderate=no was4_high=no was52_low=no was52_moderate=no 41
+was3_moderate=no was4_high=no was52_moderate=no MEST=no 41
+was3_moderate=no was4_high=no was52_moderate=no RKMT=no 41
+was3_moderate=no was4_high=no was52_moderate=no SWST=no 42
+was3_moderate=no was4_moderate=no was52_high=no was52_low=no 41
+was3_moderate=no was4_moderate=no was52_high=no was52_moderate=no 44
+was3_moderate=no was4_moderate=no was52_high=no RKMT=no 41
+was3_moderate=no was4_moderate=no was52_high=no SWST=no 42
+was3_moderate=no was4_moderate=no was52_moderate=no SWST=no 41
+was3_moderate=no was52_high=no was52_low=no was52_moderate=no 41
+was3_moderate=no was52_high=no was52_moderate=no MEST=no 41
+was3_moderate=no was52_high=no was52_moderate=no RKMT=no 41
+was3_moderate=no was52_high=no was52_moderate=no SWST=no 42
+was4_high=no was4_low=no was4_moderate=no was52_high=no 41
+was4_high=no was4_low=no was52_high=no was52_moderate=no 41
+was4_high=no was4_moderate=no was52_high=no was52_low=no 45
+was4_high=no was4_moderate=no was52_high=no was52_minimal=yes 43
+was4_high=no was4_moderate=no was52_high=no was52_moderate=no 48
+was4_high=no was4_moderate=no was52_high=no FWST=no 43
+was4_high=no was4_moderate=no was52_high=no GLAK=no 44
+was4_high=no was4_moderate=no was52_high=no MEST=no 43
+was4_high=no was4_moderate=no was52_high=no NENG=no 43
+was4_high=no was4_moderate=no was52_high=no PLNS=no 42
+was4_high=no was4_moderate=no was52_high=no RKMT=no 44
+was4_high=no was4_moderate=no was52_high=no SWST=no 46
+was4_high=no was4_moderate=no was52_low=no was52_minimal=yes 43
+was4_high=no was4_moderate=no was52_low=no was52_moderate=no 44
+was4_high=no was4_moderate=no was52_low=no GLAK=no 41
+was4_high=no was4_moderate=no was52_low=no SWST=no 43
+was4_high=no was4_moderate=no was52_minimal=yes was52_moderate=no 43
+was4_high=no was4_moderate=no was52_minimal=yes SWST=no 41
+was4_high=no was4_moderate=no was52_moderate=no FWST=no 42
+was4_high=no was4_moderate=no was52_moderate=no GLAK=no 43
+was4_high=no was4_moderate=no was52_moderate=no MEST=no 43
+was4_high=no was4_moderate=no was52_moderate=no NENG=no 42
+was4_high=no was4_moderate=no was52_moderate=no PLNS=no 41
+was4_high=no was4_moderate=no was52_moderate=no RKMT=no 43
+was4_high=no was4_moderate=no was52_moderate=no SWST=no 45
+was4_high=no was4_moderate=no GLAK=no SWST=no 41
+was4_high=no was4_moderate=no RKMT=no SWST=no 41
+was4_high=no was52_high=no was52_low=no was52_minimal=yes 44
+was4_high=no was52_high=no was52_low=no was52_moderate=no 45
+was4_high=no was52_high=no was52_low=no GLAK=no 42
+was4_high=no was52_high=no was52_low=no NENG=no 41
+was4_high=no was52_high=no was52_low=no RKMT=no 41
+was4_high=no was52_high=no was52_low=no SWST=no 44
+was4_high=no was52_high=no was52_minimal=yes was52_moderate=no 44
+was4_high=no was52_high=no was52_minimal=yes SWST=no 42
+was4_high=no was52_high=no was52_moderate=no FWST=no 43
+was4_high=no was52_high=no was52_moderate=no GLAK=no 44
+was4_high=no was52_high=no was52_moderate=no MEST=no 44
+was4_high=no was52_high=no was52_moderate=no NENG=no 43
+was4_high=no was52_high=no was52_moderate=no PLNS=no 42
+was4_high=no was52_high=no was52_moderate=no RKMT=no 44
+was4_high=no was52_high=no was52_moderate=no SWST=no 46
+was4_high=no was52_high=no FWST=no SWST=no 41
+was4_high=no was52_high=no GLAK=no SWST=no 42
+was4_high=no was52_high=no MEST=no SWST=no 41
+was4_high=no was52_high=no NENG=no SWST=no 41
+was4_high=no was52_high=no RKMT=no SWST=no 42
+was4_high=no was52_low=no was52_minimal=yes was52_moderate=no 44
+was4_high=no was52_low=no was52_minimal=yes SWST=no 42
+was4_high=no was52_low=no was52_moderate=no GLAK=no 41
+was4_high=no was52_low=no was52_moderate=no SWST=no 43
+was4_high=no was52_minimal=yes was52_moderate=no SWST=no 42
+was4_high=no was52_moderate=no GLAK=no SWST=no 41
+was4_high=no was52_moderate=no MEST=no SWST=no 41
+was4_high=no was52_moderate=no RKMT=no SWST=no 41
+was4_low=no was4_moderate=no was52_high=no was52_moderate=no 41
+was4_moderate=no was52_high=no was52_low=no was52_minimal=yes 44
+was4_moderate=no was52_high=no was52_low=no was52_moderate=no 45
+was4_moderate=no was52_high=no was52_low=no GLAK=no 42
+was4_moderate=no was52_high=no was52_low=no NENG=no 41
+was4_moderate=no was52_high=no was52_low=no RKMT=no 41
+was4_moderate=no was52_high=no was52_low=no SWST=no 43
+was4_moderate=no was52_high=no was52_minimal=yes was52_moderate=no 44
+was4_moderate=no was52_high=no was52_minimal=yes SWST=no 41
+was4_moderate=no was52_high=no was52_moderate=no FWST=no 43
+was4_moderate=no was52_high=no was52_moderate=no GLAK=no 44
+was4_moderate=no was52_high=no was52_moderate=no MEST=no 44
+was4_moderate=no was52_high=no was52_moderate=no NENG=no 43
+was4_moderate=no was52_high=no was52_moderate=no PLNS=no 42
+was4_moderate=no was52_high=no was52_moderate=no RKMT=no 44
+was4_moderate=no was52_high=no was52_moderate=no SWST=no 45
+was4_moderate=no was52_high=no GLAK=no SWST=no 41
+was4_moderate=no was52_high=no RKMT=no SWST=no 41
+was4_moderate=no was52_low=no was52_minimal=yes was52_moderate=no 44
+was4_moderate=no was52_low=no was52_minimal=yes SWST=no 41
+was4_moderate=no was52_low=no was52_moderate=no GLAK=no 41
+was4_moderate=no was52_low=no was52_moderate=no SWST=no 42
+was4_moderate=no was52_minimal=yes was52_moderate=no SWST=no 41
+was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 45
+was52_high=no was52_low=no was52_minimal=yes GLAK=no 41
+was52_high=no was52_low=no was52_minimal=yes MEST=no 41
+was52_high=no was52_low=no was52_minimal=yes SWST=no 42
+was52_high=no was52_low=no was52_moderate=no GLAK=no 42
+was52_high=no was52_low=no was52_moderate=no MEST=no 41
+was52_high=no was52_low=no was52_moderate=no NENG=no 41
+was52_high=no was52_low=no was52_moderate=no RKMT=no 41
+was52_high=no was52_low=no was52_moderate=no SWST=no 43
+was52_high=no was52_minimal=yes was52_moderate=no GLAK=no 41
+was52_high=no was52_minimal=yes was52_moderate=no MEST=no 41
+was52_high=no was52_minimal=yes was52_moderate=no SWST=no 42
+was52_high=no was52_moderate=no GLAK=no SWST=no 41
+was52_high=no was52_moderate=no MEST=no SWST=no 41
+was52_high=no was52_moderate=no RKMT=no SWST=no 41
+was52_low=no was52_minimal=yes was52_moderate=no GLAK=no 41
+was52_low=no was52_minimal=yes was52_moderate=no MEST=no 41
+was52_low=no was52_minimal=yes was52_moderate=no SWST=no 42
+
+Size of set of large itemsets L(5): 362
+
+Large Itemsets L(5):
+high=no was_high=no was4_high=no was4_moderate=no was52_high=no 41
+has_decreased=no was_high=no was3_high=no was4_high=no was4_moderate=no 41
+has_decreased=no was_high=no was3_high=no was4_high=no was52_high=no 41
+has_decreased=no was_high=no was3_high=no was4_moderate=no was52_high=no 41
+has_decreased=no was_high=no was3_moderate=no was4_high=no was52_high=no 41
+has_decreased=no was_high=no was4_high=no was4_moderate=no was52_high=no 43
+has_decreased=no was_high=no was4_high=no was4_moderate=no was52_moderate=no 42
+has_decreased=no was_high=no was4_high=no was52_high=no was52_moderate=no 43
+has_decreased=no was_high=no was4_high=no was52_high=no FWST=no 41
+has_decreased=no was_high=no was4_high=no was52_high=no SWST=no 41
+has_decreased=no was_high=no was4_moderate=no was52_high=no was52_moderate=no 42
+has_decreased=no was1_high=no was4_high=no was4_moderate=no was52_high=no 41
+has_decreased=no was3_high=no was4_high=no was4_moderate=no was52_high=no 43
+has_decreased=no was3_high=no was4_high=no was4_moderate=no was52_moderate=no 42
+has_decreased=no was3_high=no was4_high=no was52_high=no was52_moderate=no 42
+has_decreased=no was3_high=no was4_moderate=no was52_high=no was52_moderate=no 43
+has_decreased=no was3_high=no was4_moderate=no was52_high=no FWST=no 41
+has_decreased=no was3_low=no was4_high=no was4_moderate=no was52_high=no 41
+has_decreased=no was3_low=no was4_high=no was52_high=no was52_moderate=no 41
+has_decreased=no was3_low=no was4_moderate=no was52_high=no was52_moderate=no 41
+has_decreased=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 41
+has_decreased=no was3_moderate=no was4_high=no was52_high=no was52_moderate=no 41
+has_decreased=no was4_high=no was4_moderate=no was52_high=no was52_low=no 41
+has_decreased=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 44
+has_decreased=no was4_high=no was4_moderate=no was52_high=no FWST=no 42
+has_decreased=no was4_high=no was4_moderate=no was52_high=no RKMT=no 41
+has_decreased=no was4_high=no was4_moderate=no was52_high=no SWST=no 42
+has_decreased=no was4_high=no was4_moderate=no was52_moderate=no FWST=no 41
+has_decreased=no was4_high=no was4_moderate=no was52_moderate=no SWST=no 41
+has_decreased=no was4_high=no was52_high=no was52_low=no was52_moderate=no 41
+has_decreased=no was4_high=no was52_high=no was52_moderate=no FWST=no 42
+has_decreased=no was4_high=no was52_high=no was52_moderate=no RKMT=no 41
+has_decreased=no was4_high=no was52_high=no was52_moderate=no SWST=no 42
+has_decreased=no was4_moderate=no was52_high=no was52_low=no was52_moderate=no 41
+has_decreased=no was4_moderate=no was52_high=no was52_moderate=no FWST=no 42
+has_decreased=no was4_moderate=no was52_high=no was52_moderate=no RKMT=no 41
+has_decreased=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 41
+has_decreased=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was_high=no was1_high=no was2_high=no was4_high=no was4_moderate=no 41
+was_high=no was1_high=no was2_high=no was4_high=no was52_high=no 41
+was_high=no was1_high=no was2_high=no was4_moderate=no was52_high=no 41
+was_high=no was1_high=no was3_high=no was4_high=no was4_moderate=no 42
+was_high=no was1_high=no was3_high=no was4_high=no was52_high=no 42
+was_high=no was1_high=no was3_high=no was4_high=no was52_moderate=no 41
+was_high=no was1_high=no was3_high=no was4_moderate=no was52_high=no 42
+was_high=no was1_high=no was3_high=no was4_moderate=no was52_moderate=no 41
+was_high=no was1_high=no was3_high=no was52_high=no was52_moderate=no 41
+was_high=no was1_high=no was3_moderate=no was4_high=no was4_moderate=no 41
+was_high=no was1_high=no was3_moderate=no was4_high=no was52_high=no 41
+was_high=no was1_high=no was3_moderate=no was4_moderate=no was52_high=no 41
+was_high=no was1_high=no was4_high=no was4_moderate=no was52_high=no 44
+was_high=no was1_high=no was4_high=no was4_moderate=no was52_moderate=no 43
+was_high=no was1_high=no was4_high=no was4_moderate=no SWST=no 41
+was_high=no was1_high=no was4_high=no was52_high=no was52_moderate=no 43
+was_high=no was1_high=no was4_high=no was52_high=no SWST=no 41
+was_high=no was1_high=no was4_moderate=no was52_high=no was52_moderate=no 43
+was_high=no was1_high=no was4_moderate=no was52_high=no SWST=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_high=no was4_high=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_high=no was4_moderate=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_high=no was52_high=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_moderate=no was4_high=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_moderate=no was52_high=no 41
+was_high=no was1_moderate=no was2_moderate=no was4_high=no was4_moderate=no 41
+was_high=no was1_moderate=no was2_moderate=no was4_high=no was52_high=no 42
+was_high=no was1_moderate=no was2_moderate=no was4_high=no was52_moderate=no 41
+was_high=no was1_moderate=no was2_moderate=no was4_moderate=no was52_high=no 41
+was_high=no was1_moderate=no was2_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was1_moderate=no was3_high=no was4_high=no was4_moderate=no 41
+was_high=no was1_moderate=no was3_high=no was4_high=no was52_high=no 41
+was_high=no was1_moderate=no was3_high=no was4_moderate=no was52_high=no 41
+was_high=no was1_moderate=no was3_moderate=no was4_high=no was4_moderate=no 41
+was_high=no was1_moderate=no was3_moderate=no was4_high=no was52_high=no 42
+was_high=no was1_moderate=no was3_moderate=no was4_high=no was52_moderate=no 41
+was_high=no was1_moderate=no was3_moderate=no was4_moderate=no was52_high=no 41
+was_high=no was1_moderate=no was3_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was1_moderate=no was4_high=no was4_moderate=no was52_high=no 42
+was_high=no was1_moderate=no was4_high=no was4_moderate=no was52_moderate=no 41
+was_high=no was1_moderate=no was4_high=no was52_high=no was52_moderate=no 42
+was_high=no was1_moderate=no was4_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was2_high=no was4_high=no was4_moderate=no was52_high=no 41
+was_high=no was2_moderate=no was3_high=no was4_high=no was4_moderate=no 42
+was_high=no was2_moderate=no was3_high=no was4_high=no was52_high=no 42
+was_high=no was2_moderate=no was3_high=no was4_high=no was52_moderate=no 41
+was_high=no was2_moderate=no was3_high=no was4_moderate=no was52_high=no 42
+was_high=no was2_moderate=no was3_high=no was4_moderate=no was52_moderate=no 41
+was_high=no was2_moderate=no was3_high=no was52_high=no was52_moderate=no 41
+was_high=no was2_moderate=no was3_low=no was4_high=no was52_high=no 41
+was_high=no was2_moderate=no was3_moderate=no was4_high=no was4_moderate=no 41
+was_high=no was2_moderate=no was3_moderate=no was4_high=no was52_high=no 42
+was_high=no was2_moderate=no was3_moderate=no was4_high=no was52_moderate=no 41
+was_high=no was2_moderate=no was3_moderate=no was4_moderate=no was52_high=no 41
+was_high=no was2_moderate=no was3_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was2_moderate=no was4_high=no was4_moderate=no was52_high=no 43
+was_high=no was2_moderate=no was4_high=no was4_moderate=no was52_moderate=no 42
+was_high=no was2_moderate=no was4_high=no was52_high=no was52_low=no 41
+was_high=no was2_moderate=no was4_high=no was52_high=no was52_moderate=no 43
+was_high=no was2_moderate=no was4_high=no was52_high=no SWST=no 41
+was_high=no was2_moderate=no was4_moderate=no was52_high=no was52_moderate=no 42
+was_high=no was3_high=no was3_moderate=no was4_high=no was4_moderate=no 42
+was_high=no was3_high=no was3_moderate=no was4_high=no was52_high=no 42
+was_high=no was3_high=no was3_moderate=no was4_high=no was52_moderate=no 41
+was_high=no was3_high=no was3_moderate=no was4_moderate=no was52_high=no 42
+was_high=no was3_high=no was3_moderate=no was4_moderate=no was52_moderate=no 41
+was_high=no was3_high=no was3_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no 45
+was_high=no was3_high=no was4_high=no was4_moderate=no was52_low=no 41
+was_high=no was3_high=no was4_high=no was4_moderate=no was52_moderate=no 44
+was_high=no was3_high=no was4_high=no was4_moderate=no MEST=no 41
+was_high=no was3_high=no was4_high=no was4_moderate=no SWST=no 42
+was_high=no was3_high=no was4_high=no was52_high=no was52_low=no 41
+was_high=no was3_high=no was4_high=no was52_high=no was52_moderate=no 44
+was_high=no was3_high=no was4_high=no was52_high=no MEST=no 41
+was_high=no was3_high=no was4_high=no was52_high=no SWST=no 42
+was_high=no was3_high=no was4_high=no was52_moderate=no MEST=no 41
+was_high=no was3_high=no was4_high=no was52_moderate=no SWST=no 41
+was_high=no was3_high=no was4_moderate=no was52_high=no was52_low=no 41
+was_high=no was3_high=no was4_moderate=no was52_high=no was52_moderate=no 44
+was_high=no was3_high=no was4_moderate=no was52_high=no MEST=no 41
+was_high=no was3_high=no was4_moderate=no was52_high=no SWST=no 42
+was_high=no was3_high=no was4_moderate=no was52_moderate=no MEST=no 41
+was_high=no was3_high=no was4_moderate=no was52_moderate=no SWST=no 41
+was_high=no was3_high=no was52_high=no was52_moderate=no MEST=no 41
+was_high=no was3_high=no was52_high=no was52_moderate=no SWST=no 41
+was_high=no was3_low=no was4_high=no was4_moderate=no was52_high=no 42
+was_high=no was3_low=no was4_high=no was4_moderate=no was52_moderate=no 41
+was_high=no was3_low=no was4_high=no was52_high=no was52_low=no 41
+was_high=no was3_low=no was4_high=no was52_high=no was52_moderate=no 42
+was_high=no was3_low=no was4_high=no was52_high=no SWST=no 41
+was_high=no was3_low=no was4_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 44
+was_high=no was3_moderate=no was4_high=no was4_moderate=no was52_moderate=no 43
+was_high=no was3_moderate=no was4_high=no was4_moderate=no SWST=no 41
+was_high=no was3_moderate=no was4_high=no was52_high=no was52_low=no 41
+was_high=no was3_moderate=no was4_high=no was52_high=no was52_moderate=no 44
+was_high=no was3_moderate=no was4_high=no was52_high=no MEST=no 41
+was_high=no was3_moderate=no was4_high=no was52_high=no RKMT=no 41
+was_high=no was3_moderate=no was4_high=no was52_high=no SWST=no 42
+was_high=no was3_moderate=no was4_high=no was52_moderate=no MEST=no 41
+was_high=no was3_moderate=no was4_high=no was52_moderate=no SWST=no 41
+was_high=no was3_moderate=no was4_moderate=no was52_high=no was52_moderate=no 43
+was_high=no was3_moderate=no was4_moderate=no was52_high=no SWST=no 41
+was_high=no was3_moderate=no was52_high=no was52_moderate=no MEST=no 41
+was_high=no was3_moderate=no was52_high=no was52_moderate=no SWST=no 41
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no 43
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_minimal=yes 41
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 46
+was_high=no was4_high=no was4_moderate=no was52_high=no FWST=no 41
+was_high=no was4_high=no was4_moderate=no was52_high=no GLAK=no 42
+was_high=no was4_high=no was4_moderate=no was52_high=no MEST=no 43
+was_high=no was4_high=no was4_moderate=no was52_high=no NENG=no 41
+was_high=no was4_high=no was4_moderate=no was52_high=no RKMT=no 42
+was_high=no was4_high=no was4_moderate=no was52_high=no SWST=no 44
+was_high=no was4_high=no was4_moderate=no was52_low=no was52_minimal=yes 41
+was_high=no was4_high=no was4_moderate=no was52_low=no was52_moderate=no 42
+was_high=no was4_high=no was4_moderate=no was52_low=no SWST=no 41
+was_high=no was4_high=no was4_moderate=no was52_minimal=yes was52_moderate=no 41
+was_high=no was4_high=no was4_moderate=no was52_moderate=no GLAK=no 41
+was_high=no was4_high=no was4_moderate=no was52_moderate=no MEST=no 43
+was_high=no was4_high=no was4_moderate=no was52_moderate=no RKMT=no 41
+was_high=no was4_high=no was4_moderate=no was52_moderate=no SWST=no 43
+was_high=no was4_high=no was52_high=no was52_low=no was52_minimal=yes 42
+was_high=no was4_high=no was52_high=no was52_low=no was52_moderate=no 43
+was_high=no was4_high=no was52_high=no was52_low=no SWST=no 42
+was_high=no was4_high=no was52_high=no was52_minimal=yes was52_moderate=no 42
+was_high=no was4_high=no was52_high=no was52_moderate=no FWST=no 41
+was_high=no was4_high=no was52_high=no was52_moderate=no GLAK=no 42
+was_high=no was4_high=no was52_high=no was52_moderate=no MEST=no 44
+was_high=no was4_high=no was52_high=no was52_moderate=no NENG=no 41
+was_high=no was4_high=no was52_high=no was52_moderate=no RKMT=no 42
+was_high=no was4_high=no was52_high=no was52_moderate=no SWST=no 44
+was_high=no was4_high=no was52_high=no MEST=no SWST=no 41
+was_high=no was4_high=no was52_low=no was52_minimal=yes was52_moderate=no 42
+was_high=no was4_high=no was52_low=no was52_moderate=no SWST=no 41
+was_high=no was4_high=no was52_moderate=no MEST=no SWST=no 41
+was_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes 41
+was_high=no was4_moderate=no was52_high=no was52_low=no was52_moderate=no 42
+was_high=no was4_moderate=no was52_high=no was52_low=no SWST=no 41
+was_high=no was4_moderate=no was52_high=no was52_minimal=yes was52_moderate=no 41
+was_high=no was4_moderate=no was52_high=no was52_moderate=no GLAK=no 41
+was_high=no was4_moderate=no was52_high=no was52_moderate=no MEST=no 43
+was_high=no was4_moderate=no was52_high=no was52_moderate=no RKMT=no 41
+was_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 43
+was_high=no was4_moderate=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was_high=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 42
+was_high=no was52_high=no was52_low=no was52_moderate=no SWST=no 41
+was_high=no was52_high=no was52_moderate=no MEST=no SWST=no 41
+was1_high=no was2_high=no was3_high=no was4_high=no was4_moderate=no 41
+was1_high=no was2_high=no was3_high=no was4_high=no was52_high=no 41
+was1_high=no was2_high=no was3_high=no was4_moderate=no was52_high=no 41
+was1_high=no was2_high=no was3_moderate=no was4_high=no was4_moderate=no 41
+was1_high=no was2_high=no was3_moderate=no was4_high=no was52_high=no 41
+was1_high=no was2_high=no was3_moderate=no was4_moderate=no was52_high=no 41
+was1_high=no was2_high=no was4_high=no was4_moderate=no was52_high=no 42
+was1_high=no was2_high=no was4_high=no was4_moderate=no was52_moderate=no 41
+was1_high=no was2_high=no was4_high=no was52_high=no was52_moderate=no 41
+was1_high=no was2_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was1_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no 43
+was1_high=no was3_high=no was4_high=no was4_moderate=no was52_moderate=no 42
+was1_high=no was3_high=no was4_high=no was52_high=no was52_moderate=no 42
+was1_high=no was3_high=no was4_moderate=no was52_high=no was52_moderate=no 42
+was1_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 42
+was1_high=no was3_moderate=no was4_high=no was4_moderate=no was52_moderate=no 41
+was1_high=no was3_moderate=no was4_high=no was52_high=no was52_moderate=no 41
+was1_high=no was3_moderate=no was4_moderate=no was52_high=no was52_moderate=no 41
+was1_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no 41
+was1_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 44
+was1_high=no was4_high=no was4_moderate=no was52_high=no SWST=no 42
+was1_high=no was4_high=no was4_moderate=no was52_moderate=no SWST=no 41
+was1_high=no was4_high=no was52_high=no was52_moderate=no SWST=no 41
+was1_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 41
+was1_moderate=no was2_moderate=no was3_high=no was4_high=no was4_moderate=no 42
+was1_moderate=no was2_moderate=no was3_high=no was4_high=no was52_high=no 42
+was1_moderate=no was2_moderate=no was3_high=no was4_high=no was52_moderate=no 41
+was1_moderate=no was2_moderate=no was3_high=no was4_moderate=no was52_high=no 43
+was1_moderate=no was2_moderate=no was3_high=no was4_moderate=no was52_moderate=no 42
+was1_moderate=no was2_moderate=no was3_high=no was52_high=no was52_moderate=no 42
+was1_moderate=no was2_moderate=no was3_moderate=no was4_high=no was52_high=no 41
+was1_moderate=no was2_moderate=no was4_high=no was4_moderate=no was52_high=no 42
+was1_moderate=no was2_moderate=no was4_high=no was4_moderate=no was52_moderate=no 41
+was1_moderate=no was2_moderate=no was4_high=no was52_high=no was52_moderate=no 42
+was1_moderate=no was2_moderate=no was4_moderate=no was52_high=no was52_moderate=no 42
+was1_moderate=no was3_high=no was4_high=no was4_moderate=no was52_high=no 42
+was1_moderate=no was3_high=no was4_high=no was4_moderate=no was52_moderate=no 41
+was1_moderate=no was3_high=no was4_high=no was52_high=no was52_moderate=no 41
+was1_moderate=no was3_high=no was4_moderate=no was52_high=no was52_moderate=no 42
+was1_moderate=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 41
+was1_moderate=no was3_moderate=no was4_high=no was52_high=no was52_moderate=no 41
+was1_moderate=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 42
+was2_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no 41
+was2_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 41
+was2_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was2_moderate=no was3_high=no was3_low=no was4_moderate=no was52_high=no 41
+was2_moderate=no was3_high=no was4_high=no was4_moderate=no was52_high=no 43
+was2_moderate=no was3_high=no was4_high=no was4_moderate=no was52_moderate=no 42
+was2_moderate=no was3_high=no was4_high=no was52_high=no was52_moderate=no 42
+was2_moderate=no was3_high=no was4_moderate=no was52_high=no was52_low=no 41
+was2_moderate=no was3_high=no was4_moderate=no was52_high=no was52_moderate=no 43
+was2_moderate=no was3_low=no was4_high=no was4_moderate=no was52_high=no 41
+was2_moderate=no was3_low=no was4_high=no was52_high=no was52_moderate=no 41
+was2_moderate=no was3_low=no was4_moderate=no was52_high=no was52_moderate=no 41
+was2_moderate=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 41
+was2_moderate=no was3_moderate=no was4_high=no was52_high=no was52_moderate=no 41
+was2_moderate=no was4_high=no was4_moderate=no was52_high=no was52_low=no 41
+was2_moderate=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 43
+was2_moderate=no was4_high=no was4_moderate=no was52_high=no SWST=no 41
+was2_moderate=no was4_high=no was52_high=no was52_low=no was52_moderate=no 41
+was2_moderate=no was4_high=no was52_high=no was52_moderate=no SWST=no 41
+was2_moderate=no was4_moderate=no was52_high=no was52_low=no was52_moderate=no 41
+was2_moderate=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was3_high=no was3_low=no was4_high=no was4_moderate=no was52_high=no 42
+was3_high=no was3_low=no was4_high=no was4_moderate=no was52_moderate=no 41
+was3_high=no was3_low=no was4_high=no was52_high=no was52_moderate=no 41
+was3_high=no was3_low=no was4_moderate=no was52_high=no was52_low=no 41
+was3_high=no was3_low=no was4_moderate=no was52_high=no was52_moderate=no 42
+was3_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 43
+was3_high=no was3_moderate=no was4_high=no was4_moderate=no was52_moderate=no 42
+was3_high=no was3_moderate=no was4_high=no was52_high=no was52_moderate=no 42
+was3_high=no was3_moderate=no was4_moderate=no was52_high=no was52_moderate=no 42
+was3_high=no was4_high=no was4_low=no was4_moderate=no was52_high=no 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no 43
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_minimal=yes 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 46
+was3_high=no was4_high=no was4_moderate=no was52_high=no FWST=no 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no GLAK=no 42
+was3_high=no was4_high=no was4_moderate=no was52_high=no MEST=no 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no NENG=no 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no RKMT=no 42
+was3_high=no was4_high=no was4_moderate=no was52_high=no SWST=no 44
+was3_high=no was4_high=no was4_moderate=no was52_low=no was52_minimal=yes 41
+was3_high=no was4_high=no was4_moderate=no was52_low=no was52_moderate=no 42
+was3_high=no was4_high=no was4_moderate=no was52_low=no SWST=no 41
+was3_high=no was4_high=no was4_moderate=no was52_minimal=yes was52_moderate=no 41
+was3_high=no was4_high=no was4_moderate=no was52_moderate=no GLAK=no 41
+was3_high=no was4_high=no was4_moderate=no was52_moderate=no MEST=no 41
+was3_high=no was4_high=no was4_moderate=no was52_moderate=no RKMT=no 41
+was3_high=no was4_high=no was4_moderate=no was52_moderate=no SWST=no 43
+was3_high=no was4_high=no was52_high=no was52_low=no was52_minimal=yes 41
+was3_high=no was4_high=no was52_high=no was52_low=no was52_moderate=no 42
+was3_high=no was4_high=no was52_high=no was52_low=no SWST=no 41
+was3_high=no was4_high=no was52_high=no was52_minimal=yes was52_moderate=no 41
+was3_high=no was4_high=no was52_high=no was52_moderate=no GLAK=no 41
+was3_high=no was4_high=no was52_high=no was52_moderate=no MEST=no 41
+was3_high=no was4_high=no was52_high=no was52_moderate=no RKMT=no 41
+was3_high=no was4_high=no was52_high=no was52_moderate=no SWST=no 43
+was3_high=no was4_high=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was3_high=no was4_low=no was4_moderate=no was52_high=no was52_moderate=no 41
+was3_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes 42
+was3_high=no was4_moderate=no was52_high=no was52_low=no was52_moderate=no 43
+was3_high=no was4_moderate=no was52_high=no was52_low=no SWST=no 41
+was3_high=no was4_moderate=no was52_high=no was52_minimal=yes was52_moderate=no 42
+was3_high=no was4_moderate=no was52_high=no was52_moderate=no FWST=no 41
+was3_high=no was4_moderate=no was52_high=no was52_moderate=no GLAK=no 42
+was3_high=no was4_moderate=no was52_high=no was52_moderate=no MEST=no 42
+was3_high=no was4_moderate=no was52_high=no was52_moderate=no NENG=no 41
+was3_high=no was4_moderate=no was52_high=no was52_moderate=no RKMT=no 42
+was3_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 43
+was3_high=no was4_moderate=no was52_low=no was52_minimal=yes was52_moderate=no 42
+was3_high=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 42
+was3_low=no was4_high=no was4_moderate=no was52_high=no was52_low=no 42
+was3_low=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 43
+was3_low=no was4_high=no was4_moderate=no was52_high=no SWST=no 42
+was3_low=no was4_high=no was4_moderate=no was52_low=no was52_moderate=no 41
+was3_low=no was4_high=no was4_moderate=no was52_moderate=no SWST=no 41
+was3_low=no was4_high=no was52_high=no was52_low=no was52_minimal=yes 41
+was3_low=no was4_high=no was52_high=no was52_low=no was52_moderate=no 42
+was3_low=no was4_high=no was52_high=no was52_low=no SWST=no 41
+was3_low=no was4_high=no was52_high=no was52_minimal=yes was52_moderate=no 41
+was3_low=no was4_high=no was52_high=no was52_moderate=no SWST=no 42
+was3_low=no was4_high=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was3_low=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes 41
+was3_low=no was4_moderate=no was52_high=no was52_low=no was52_moderate=no 42
+was3_low=no was4_moderate=no was52_high=no was52_minimal=yes was52_moderate=no 41
+was3_low=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 41
+was3_low=no was4_moderate=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was3_low=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 42
+was3_moderate=no was4_high=no was4_moderate=no was52_high=no was52_low=no 41
+was3_moderate=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 44
+was3_moderate=no was4_high=no was4_moderate=no was52_high=no RKMT=no 41
+was3_moderate=no was4_high=no was4_moderate=no was52_high=no SWST=no 42
+was3_moderate=no was4_high=no was4_moderate=no was52_moderate=no SWST=no 41
+was3_moderate=no was4_high=no was52_high=no was52_low=no was52_moderate=no 41
+was3_moderate=no was4_high=no was52_high=no was52_moderate=no MEST=no 41
+was3_moderate=no was4_high=no was52_high=no was52_moderate=no RKMT=no 41
+was3_moderate=no was4_high=no was52_high=no was52_moderate=no SWST=no 42
+was3_moderate=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 41
+was4_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes 43
+was4_high=no was4_moderate=no was52_high=no was52_low=no was52_moderate=no 44
+was4_high=no was4_moderate=no was52_high=no was52_low=no GLAK=no 41
+was4_high=no was4_moderate=no was52_high=no was52_low=no SWST=no 43
+was4_high=no was4_moderate=no was52_high=no was52_minimal=yes was52_moderate=no 43
+was4_high=no was4_moderate=no was52_high=no was52_minimal=yes SWST=no 41
+was4_high=no was4_moderate=no was52_high=no was52_moderate=no FWST=no 42
+was4_high=no was4_moderate=no was52_high=no was52_moderate=no GLAK=no 43
+was4_high=no was4_moderate=no was52_high=no was52_moderate=no MEST=no 43
+was4_high=no was4_moderate=no was52_high=no was52_moderate=no NENG=no 42
+was4_high=no was4_moderate=no was52_high=no was52_moderate=no PLNS=no 41
+was4_high=no was4_moderate=no was52_high=no was52_moderate=no RKMT=no 43
+was4_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 45
+was4_high=no was4_moderate=no was52_high=no GLAK=no SWST=no 41
+was4_high=no was4_moderate=no was52_high=no RKMT=no SWST=no 41
+was4_high=no was4_moderate=no was52_low=no was52_minimal=yes was52_moderate=no 43
+was4_high=no was4_moderate=no was52_low=no was52_minimal=yes SWST=no 41
+was4_high=no was4_moderate=no was52_low=no was52_moderate=no SWST=no 42
+was4_high=no was4_moderate=no was52_minimal=yes was52_moderate=no SWST=no 41
+was4_high=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 44
+was4_high=no was52_high=no was52_low=no was52_minimal=yes SWST=no 42
+was4_high=no was52_high=no was52_low=no was52_moderate=no GLAK=no 41
+was4_high=no was52_high=no was52_low=no was52_moderate=no SWST=no 43
+was4_high=no was52_high=no was52_minimal=yes was52_moderate=no SWST=no 42
+was4_high=no was52_high=no was52_moderate=no GLAK=no SWST=no 41
+was4_high=no was52_high=no was52_moderate=no MEST=no SWST=no 41
+was4_high=no was52_high=no was52_moderate=no RKMT=no SWST=no 41
+was4_high=no was52_low=no was52_minimal=yes was52_moderate=no SWST=no 42
+was4_moderate=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 44
+was4_moderate=no was52_high=no was52_low=no was52_minimal=yes SWST=no 41
+was4_moderate=no was52_high=no was52_low=no was52_moderate=no GLAK=no 41
+was4_moderate=no was52_high=no was52_low=no was52_moderate=no SWST=no 42
+was4_moderate=no was52_high=no was52_minimal=yes was52_moderate=no SWST=no 41
+was4_moderate=no was52_low=no was52_minimal=yes was52_moderate=no SWST=no 41
+was52_high=no was52_low=no was52_minimal=yes was52_moderate=no GLAK=no 41
+was52_high=no was52_low=no was52_minimal=yes was52_moderate=no MEST=no 41
+was52_high=no was52_low=no was52_minimal=yes was52_moderate=no SWST=no 42
+
+Size of set of large itemsets L(6): 100
+
+Large Itemsets L(6):
+has_decreased=no was_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no 41
+has_decreased=no was_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 42
+has_decreased=no was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 42
+has_decreased=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no FWST=no 41
+has_decreased=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 41
+was_high=no was1_high=no was2_high=no was4_high=no was4_moderate=no was52_high=no 41
+was_high=no was1_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no 42
+was_high=no was1_high=no was3_high=no was4_high=no was4_moderate=no was52_moderate=no 41
+was_high=no was1_high=no was3_high=no was4_high=no was52_high=no was52_moderate=no 41
+was_high=no was1_high=no was3_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was1_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 41
+was_high=no was1_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 43
+was_high=no was1_high=no was4_high=no was4_moderate=no was52_high=no SWST=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_high=no was4_high=no was4_moderate=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_high=no was4_high=no was52_high=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_high=no was4_moderate=no was52_high=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_moderate=no was4_high=no was52_high=no 41
+was_high=no was1_moderate=no was2_moderate=no was4_high=no was4_moderate=no was52_high=no 41
+was_high=no was1_moderate=no was2_moderate=no was4_high=no was52_high=no was52_moderate=no 41
+was_high=no was1_moderate=no was3_high=no was4_high=no was4_moderate=no was52_high=no 41
+was_high=no was1_moderate=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 41
+was_high=no was1_moderate=no was3_moderate=no was4_high=no was52_high=no was52_moderate=no 41
+was_high=no was1_moderate=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was2_moderate=no was3_high=no was4_high=no was4_moderate=no was52_high=no 42
+was_high=no was2_moderate=no was3_high=no was4_high=no was4_moderate=no was52_moderate=no 41
+was_high=no was2_moderate=no was3_high=no was4_high=no was52_high=no was52_moderate=no 41
+was_high=no was2_moderate=no was3_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was2_moderate=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 41
+was_high=no was2_moderate=no was3_moderate=no was4_high=no was52_high=no was52_moderate=no 41
+was_high=no was2_moderate=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 42
+was_high=no was3_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 42
+was_high=no was3_high=no was3_moderate=no was4_high=no was4_moderate=no was52_moderate=no 41
+was_high=no was3_high=no was3_moderate=no was4_high=no was52_high=no was52_moderate=no 41
+was_high=no was3_high=no was3_moderate=no was4_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no 41
+was_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 44
+was_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no MEST=no 41
+was_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no SWST=no 42
+was_high=no was3_high=no was4_high=no was4_moderate=no was52_moderate=no MEST=no 41
+was_high=no was3_high=no was4_high=no was4_moderate=no was52_moderate=no SWST=no 41
+was_high=no was3_high=no was4_high=no was52_high=no was52_moderate=no MEST=no 41
+was_high=no was3_high=no was4_high=no was52_high=no was52_moderate=no SWST=no 41
+was_high=no was3_high=no was4_moderate=no was52_high=no was52_moderate=no MEST=no 41
+was_high=no was3_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 41
+was_high=no was3_low=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 43
+was_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no SWST=no 41
+was_high=no was3_moderate=no was4_high=no was52_high=no was52_moderate=no MEST=no 41
+was_high=no was3_moderate=no was4_high=no was52_high=no was52_moderate=no SWST=no 41
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes 41
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no was52_moderate=no 42
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no SWST=no 41
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_minimal=yes was52_moderate=no 41
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no GLAK=no 41
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no MEST=no 43
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no RKMT=no 41
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 43
+was_high=no was4_high=no was4_moderate=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was_high=no was4_high=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 42
+was_high=no was4_high=no was52_high=no was52_low=no was52_moderate=no SWST=no 41
+was_high=no was4_high=no was52_high=no was52_moderate=no MEST=no SWST=no 41
+was_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was1_high=no was2_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no 41
+was1_high=no was2_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no 41
+was1_high=no was2_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was1_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 42
+was1_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was1_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 41
+was1_moderate=no was2_moderate=no was3_high=no was4_high=no was4_moderate=no was52_high=no 42
+was1_moderate=no was2_moderate=no was3_high=no was4_high=no was4_moderate=no was52_moderate=no 41
+was1_moderate=no was2_moderate=no was3_high=no was4_high=no was52_high=no was52_moderate=no 41
+was1_moderate=no was2_moderate=no was3_high=no was4_moderate=no was52_high=no was52_moderate=no 42
+was1_moderate=no was2_moderate=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was1_moderate=no was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was2_moderate=no was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 42
+was3_high=no was3_low=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was3_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 42
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no was52_moderate=no 42
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no SWST=no 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_minimal=yes was52_moderate=no 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no GLAK=no 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no MEST=no 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no RKMT=no 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 43
+was3_high=no was4_high=no was4_moderate=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was3_high=no was4_high=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was3_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 42
+was3_low=no was4_high=no was4_moderate=no was52_high=no was52_low=no was52_moderate=no 41
+was3_low=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 41
+was3_low=no was4_high=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was3_low=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was3_moderate=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 41
+was4_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 43
+was4_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes SWST=no 41
+was4_high=no was4_moderate=no was52_high=no was52_low=no was52_moderate=no SWST=no 42
+was4_high=no was4_moderate=no was52_high=no was52_minimal=yes was52_moderate=no SWST=no 41
+was4_high=no was4_moderate=no was52_low=no was52_minimal=yes was52_moderate=no SWST=no 41
+was4_high=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no SWST=no 42
+was4_moderate=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no SWST=no 41
+
+Size of set of large itemsets L(7): 10
+
+Large Itemsets L(7):
+was_high=no was1_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was1_moderate=no was2_moderate=no was3_high=no was4_high=no was4_moderate=no was52_high=no 41
+was_high=no was2_moderate=no was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was3_high=no was3_moderate=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no MEST=no 41
+was_high=no was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no SWST=no 41
+was_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was1_moderate=no was2_moderate=no was3_high=no was4_high=no was4_moderate=no was52_high=no was52_moderate=no 41
+was3_high=no was4_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no 41
+was4_high=no was4_moderate=no was52_high=no was52_low=no was52_minimal=yes was52_moderate=no SWST=no 41
+
+Best rules found:
+
+ 1. high=no 41 ==> was_high=no 41    <conf:(1)> lift:(1.06) lev:(0.05) [2] conv:(2.41)
+ 2. high=no 41 ==> was4_high=no 41    <conf:(1)> lift:(1.02) lev:(0.02) [0] conv:(0.8)
+ 3. high=no 41 ==> was4_moderate=no 41    <conf:(1)> lift:(1.02) lev:(0.02) [0] conv:(0.8)
+ 4. high=no 41 ==> was52_high=no 41    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 5. moderate=no 41 ==> was52_high=no 41    <conf:(1)> lift:(1) lev:(0) [0] conv:(0)
+ 6. high=no was4_high=no 41 ==> was_high=no 41    <conf:(1)> lift:(1.06) lev:(0.05) [2] conv:(2.41)
+ 7. high=no was_high=no 41 ==> was4_high=no 41    <conf:(1)> lift:(1.02) lev:(0.02) [0] conv:(0.8)
+ 8. high=no 41 ==> was_high=no was4_high=no 41    <conf:(1)> lift:(1.06) lev:(0.05) [2] conv:(2.41)
+ 9. high=no was4_moderate=no 41 ==> was_high=no 41    <conf:(1)> lift:(1.06) lev:(0.05) [2] conv:(2.41)
+10. high=no was_high=no 41 ==> was4_moderate=no 41    <conf:(1)> lift:(1.02) lev:(0.02) [0] conv:(0.8)
+
